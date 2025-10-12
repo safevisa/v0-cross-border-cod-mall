@@ -20,6 +20,18 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: '**.r2.dev',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'pub-2f5a3d2e2c2e4c8e8e8e8e8e8e8e8e8e8.r2.dev',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
   async headers() {
