@@ -32,7 +32,22 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: '**.blob.vercel-storage.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'blob.vercel-storage.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
+    unoptimized: false,
+    loader: 'default',
+    domains: ['*.vercel-storage.com', '*.public.blob.vercel-storage.com', '*.blob.vercel-storage.com', 'blob.vercel-storage.com', '*.r2.dev', 'pub-2f5a3d2e2c2e4c8e8e8e8e8e8e8e8e8e8.r2.dev'],
   },
   async headers() {
     return [
@@ -65,7 +80,7 @@ const nextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none';",
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.vercel-storage.com https://*.public.blob.vercel-storage.com https://*.blob.vercel-storage.com https://blob.vercel-storage.com https://*.r2.dev https://pub-2f5a3d2e2c2e4c8e8e8e8e8e8e8e8e8e8.r2.dev https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'none';",
           },
         ],
       },
