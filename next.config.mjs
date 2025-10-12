@@ -1,53 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**.vercel-storage.com',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: '**.public.blob.vercel-storage.com',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'vercel.com',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: '**.r2.dev',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'pub-2f5a3d2e2c2e4c8e8e8e8e8e8e8e8e8e8.r2.dev',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: '**.blob.vercel-storage.com',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'blob.vercel-storage.com',
-        port: '',
-        pathname: '/**',
-      },
-    ],
     unoptimized: false,
-    loader: 'default',
-    domains: ['*.vercel-storage.com', '*.public.blob.vercel-storage.com', '*.blob.vercel-storage.com', 'blob.vercel-storage.com', '*.r2.dev', 'pub-2f5a3d2e2c2e4c8e8e8e8e8e8e8e8e8e8.r2.dev'],
   },
   async headers() {
     return [
