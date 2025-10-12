@@ -1,6 +1,9 @@
+"use client"
+
 import { notFound } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
+import { use } from "react"
 import { Star, ShoppingCart, Heart, Share2, Package, Shield, ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -9,17 +12,68 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { getProductById, getProductsByCategory } from "@/lib/products"
 import { ProductCard } from "@/components/product-card"
+import { useCart } from "@/lib/cart-context"
+import { useWishlist } from "@/lib/wishlist-context"
 
-export default function ProductDetailPage({ params }: { params: { id: string } }) {
-  const product = getProductById(params.id)
+export default function ProductDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = use(params)
+  const { addToCart } = useCart()
+  const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist()
+  const product = getProductById(resolvedParams.id)
 
   if (!product) {
-    notFound()
+    return (
+      <div className="flex min-h-screen flex-col">
+        <Header />
+        <main className="flex-1 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold mb-4">404</h1>
+            <p className="text-muted-foreground mb-6">Product not found</p>
+            <Button asChild>
+              <Link href="/">Go Home</Link>
+            </Button>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    )
   }
 
   const relatedProducts = getProductsByCategory(product.category)
     .filter((p) => p.id !== product.id)
     .slice(0, 4)
+
+  const handleWishlistToggle = () => {
+    if (isInWishlist(product.id)) {
+      removeFromWishlist(product.id)
+    } else {
+      addToWishlist(product)
+    }
+  }
+
+  const handleShare = async () => {
+    const shareData = {
+      title: product.name,
+      text: `Check out this product: ${product.name}`,
+      url: window.location.href,
+    }
+
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData)
+      } catch (error) {
+        console.log('Error sharing:', error)
+      }
+    } else {
+      // Fallback: copy to clipboard
+      try {
+        await navigator.clipboard.writeText(window.location.href)
+        alert('Product link copied to clipboard!')
+      } catch (error) {
+        console.log('Error copying to clipboard:', error)
+      }
+    }
+  }
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -85,14 +139,28 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
               <p className="text-muted-foreground">{product.description}</p>
 
               <div className="flex gap-3">
-                <Button size="lg" className="flex-1" disabled={!product.inStock}>
+                <Button 
+                  size="lg" 
+                  className="flex-1" 
+                  disabled={!product.inStock}
+                  onClick={() => addToCart(product)}
+                >
                   <ShoppingCart className="mr-2 h-5 w-5" />
                   Add to Cart
                 </Button>
-                <Button size="lg" variant="outline">
-                  <Heart className="h-5 w-5" />
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  onClick={handleWishlistToggle}
+                  className={isInWishlist(product.id) ? "bg-red-50 border-red-200 text-red-600" : ""}
+                >
+                  <Heart className={`h-5 w-5 ${isInWishlist(product.id) ? "fill-current" : ""}`} />
                 </Button>
-                <Button size="lg" variant="outline">
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  onClick={handleShare}
+                >
                   <Share2 className="h-5 w-5" />
                 </Button>
               </div>

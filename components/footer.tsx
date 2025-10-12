@@ -38,27 +38,42 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/category/daily-essentials" className="text-muted-foreground hover:text-foreground">
-                  Daily Essentials
+                  🏠 Daily Essentials
                 </Link>
               </li>
               <li>
                 <Link href="/category/mens-fashion" className="text-muted-foreground hover:text-foreground">
-                  Men's Fashion
+                  👔 Men's Fashion
                 </Link>
               </li>
               <li>
                 <Link href="/category/womens-fashion" className="text-muted-foreground hover:text-foreground">
-                  Women's Fashion
+                  👗 Women's Fashion
                 </Link>
               </li>
               <li>
                 <Link href="/category/outdoor-camping" className="text-muted-foreground hover:text-foreground">
-                  Outdoor & Camping
+                  ⛺ Outdoor & Camping
                 </Link>
               </li>
               <li>
                 <Link href="/category/sports-equipment" className="text-muted-foreground hover:text-foreground">
-                  Sports Equipment
+                  🏋️ Sports Equipment
+                </Link>
+              </li>
+              <li>
+                <Link href="/category/puer-tea" className="text-muted-foreground hover:text-foreground">
+                  🍵 Pu-er Tea
+                </Link>
+              </li>
+              <li>
+                <Link href="/category/jade-jewelry" className="text-muted-foreground hover:text-foreground">
+                  💎 Jade & Jewelry
+                </Link>
+              </li>
+              <li>
+                <Link href="/category/teapots" className="text-muted-foreground hover:text-foreground">
+                  🫖 Purple Clay Teapots
                 </Link>
               </li>
             </ul>
@@ -69,27 +84,37 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/track-order" className="text-muted-foreground hover:text-foreground">
-                  Track Order
+                  📦 Track Order
                 </Link>
               </li>
               <li>
                 <Link href="/shipping" className="text-muted-foreground hover:text-foreground">
-                  Shipping Info
+                  🚚 Shipping Info
                 </Link>
               </li>
               <li>
                 <Link href="/returns" className="text-muted-foreground hover:text-foreground">
-                  Returns & Refunds
+                  🔄 Returns & Refunds
                 </Link>
               </li>
               <li>
                 <Link href="/faq" className="text-muted-foreground hover:text-foreground">
-                  FAQ
+                  ❓ FAQ
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-muted-foreground hover:text-foreground">
-                  Contact Us
+                  💬 Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/size-guide" className="text-muted-foreground hover:text-foreground">
+                  📏 Size Guide
+                </Link>
+              </li>
+              <li>
+                <Link href="/cod-info" className="text-muted-foreground hover:text-foreground">
+                  💰 COD Payment Info
                 </Link>
               </li>
             </ul>
@@ -100,22 +125,32 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/privacy" className="text-muted-foreground hover:text-foreground">
-                  Privacy Policy
+                  🔒 Privacy Policy
                 </Link>
               </li>
               <li>
                 <Link href="/terms" className="text-muted-foreground hover:text-foreground">
-                  Terms of Service
+                  📋 Terms of Service
                 </Link>
               </li>
               <li>
                 <Link href="/data-protection" className="text-muted-foreground hover:text-foreground">
-                  Data Protection
+                  🛡️ Data Protection
                 </Link>
               </li>
               <li>
                 <Link href="/cookies" className="text-muted-foreground hover:text-foreground">
-                  Cookie Policy
+                  🍪 Cookie Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/disclaimer" className="text-muted-foreground hover:text-foreground">
+                  ⚖️ Disclaimer
+                </Link>
+              </li>
+              <li>
+                <Link href="/intellectual-property" className="text-muted-foreground hover:text-foreground">
+                  🧠 Intellectual Property
                 </Link>
               </li>
             </ul>
@@ -123,7 +158,8 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>© 2025 CODPAL PTE. LTD. All rights reserved. | Registered in Singapore</p>
+          <p className="mb-2">© 2025 ICEBOX NETWORK SL. All rights reserved.</p>
+          <p>Getafe, Resurrección street, number 3, Spain | Governed by Spanish Law</p>
         </div>
       </div>
     </footer>

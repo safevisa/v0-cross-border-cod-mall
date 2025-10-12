@@ -1,0 +1,27 @@
+export interface Product {
+  id: string
+  name: string
+  category: string
+  price: number
+  originalPrice?: number
+  image: string
+  rating: number
+  reviews: number
+  inStock: boolean
+  description: string
+  features: string[]
+  specifications: Record<string, string>
+}
+
+export const categories = [
+  { id: "daily-essentials", name: "Daily Essentials", icon: "🏠" },
+  { id: "mens-fashion", name: "Men's Fashion", icon: "👔" },
+  { id: "womens-fashion", name: "Women's Fashion", icon: "👗" },
+  { id: "outdoor-camping", name: "Outdoor & Camping", icon: "⛺" },
+  { id: "sports-equipment", name: "Sports Equipment", icon: "🏋️" },
+  { id: "puer-tea", name: "Pu-er Tea", icon: "🍵" },
+  { id: "jade-jewelry", name: "Jade & Jewelry", icon: "💎" },
+  { id: "teapots", name: "Purple Clay Teapots", icon: "🫖" },
+]
+
+export const products: Product[] = [

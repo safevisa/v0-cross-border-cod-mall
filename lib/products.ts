@@ -21,13 +21,7 @@ export const categories = [
   { id: "sports-equipment", name: "Sports Equipment", icon: "🏋️" },
   { id: "puer-tea", name: "Pu-er Tea", icon: "🍵" },
   { id: "jade-jewelry", name: "Jade & Jewelry", icon: "💎" },
-  { id: "handicrafts", name: "Handicrafts", icon: "🎨" },
-  { id: "bracelets", name: "Bracelets & Beads", icon: "📿" },
-  { id: "creative-decor", name: "Creative Decor", icon: "🗿" },
   { id: "teapots", name: "Purple Clay Teapots", icon: "🫖" },
-  { id: "beauty-tools", name: "Beauty Tools", icon: "💄" },
-  { id: "creative-toys", name: "Creative Toys", icon: "🎮" },
-  { id: "vending-machines", name: "Vending Machines", icon: "🤖" },
 ]
 
 export const products: Product[] = [

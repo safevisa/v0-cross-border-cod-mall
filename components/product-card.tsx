@@ -1,23 +1,45 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
-import { Star, ShoppingCart } from "lucide-react"
+import { Star, ShoppingCart, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import type { Product } from "@/lib/products"
+import { useCart } from "@/lib/cart-context"
+import { useWishlist } from "@/lib/wishlist-context"
 
 interface ProductCardProps {
   product: Product
 }
 
 export function ProductCard({ product }: ProductCardProps) {
+  const { addToCart } = useCart()
+  const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist()
   const discount = product.originalPrice
     ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
     : 0
 
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+    addToCart(product)
+  }
+
+  const handleWishlistToggle = (e: React.MouseEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+    if (isInWishlist(product.id)) {
+      removeFromWishlist(product.id)
+    } else {
+      addToWishlist(product)
+    }
+  }
+
   return (
     <Card className="group overflow-hidden hover:shadow-lg transition-shadow">
-      <Link href={`/product/${product.id}`}>
+      <Link href={`/products/${product.id}`}>
         <div className="relative aspect-square overflow-hidden bg-muted">
           <Image
             src={product.image || "/placeholder.svg"}
@@ -31,11 +53,17 @@ export function ProductCard({ product }: ProductCardProps) {
           {!product.inStock && (
             <Badge className="absolute top-2 right-2 bg-muted text-muted-foreground">Out of Stock</Badge>
           )}
+          <button
+            onClick={handleWishlistToggle}
+            className="absolute top-2 right-2 p-1 rounded-full bg-white/80 hover:bg-white transition-colors opacity-0 group-hover:opacity-100"
+          >
+            <Heart className={`h-4 w-4 ${isInWishlist(product.id) ? "fill-red-500 text-red-500" : "text-gray-600"}`} />
+          </button>
         </div>
       </Link>
 
       <CardContent className="p-4">
-        <Link href={`/product/${product.id}`}>
+        <Link href={`/products/${product.id}`}>
           <h3 className="font-semibold line-clamp-2 mb-2 group-hover:text-primary transition-colors">{product.name}</h3>
         </Link>
 
@@ -62,7 +90,11 @@ export function ProductCard({ product }: ProductCardProps) {
       </CardContent>
 
       <CardFooter className="p-4 pt-0">
-        <Button className="w-full" disabled={!product.inStock}>
+        <Button 
+          className="w-full" 
+          disabled={!product.inStock}
+          onClick={handleAddToCart}
+        >
           <ShoppingCart className="h-4 w-4 mr-2" />
           {product.inStock ? "Add to Cart" : "Out of Stock"}
         </Button>
