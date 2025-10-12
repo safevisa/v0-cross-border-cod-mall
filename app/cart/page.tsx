@@ -49,8 +49,8 @@ export default function CartPage() {
               {/* Cart Items */}
               <div className="md:col-span-2">
                 <div className="space-y-4">
-                  {items.map((item) => (
-                    <div key={item.id} className="flex gap-4 p-4 border rounded-lg">
+                  {items.map((item, index) => (
+                    <div key={`${item.product.id}-${index}`} className="flex gap-4 p-4 border rounded-lg">
                       <div className="relative h-20 w-20 flex-shrink-0">
                         <Image
                           src={item.product.image || "/placeholder.svg"}

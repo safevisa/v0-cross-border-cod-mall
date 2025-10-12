@@ -38,7 +38,7 @@ export interface Order {
 
 interface OrderContextType {
   orders: Order[]
-  addOrder: (order: Omit<Order, 'id' | 'orderNumber' | 'orderDate'>) => void
+  addOrder: (order: Omit<Order, 'id' | 'orderNumber' | 'orderDate'>) => Order
   updateOrderStatus: (orderId: string, status: Order['status']) => void
   getOrdersByUser: (userId: string) => Order[]
   getOrderById: (orderId: string) => Order | undefined

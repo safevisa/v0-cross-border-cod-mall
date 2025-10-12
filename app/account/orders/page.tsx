@@ -12,6 +12,7 @@ import { Separator } from "@/components/ui/separator"
 import { useAuth } from "@/lib/auth-context"
 import { useCart } from "@/lib/cart-context"
 import { useOrders } from "@/lib/order-context"
+import { getProductById } from "@/lib/products"
 
 export default function OrdersPage() {
   const { isLoggedIn, user } = useAuth()
@@ -23,18 +24,11 @@ export default function OrdersPage() {
 
   const handleReorder = (order: any) => {
     order.items.forEach((item: any) => {
-      for (let i = 0; i < item.quantity; i++) {
-        addToCart({
-          id: item.id,
-          name: item.name,
-          price: item.price,
-          image: item.image,
-          description: "",
-          category: "",
-          inStock: true,
-          rating: 4.5,
-          reviewCount: 100
-        })
+      const product = getProductById(item.id)
+      if (product) {
+        for (let i = 0; i < item.quantity; i++) {
+          addToCart(product)
+        }
       }
     })
     alert('Items added to cart!')
@@ -208,7 +202,7 @@ export default function OrdersPage() {
                             <Button
                               variant="outline"
                               size="sm"
-                              onClick={() => handleTrackPackage(order.trackingNumber)}
+                              onClick={() => handleTrackPackage(order.trackingNumber!)}
                             >
                               <MapPin className="mr-2 h-4 w-4" />
                               Track Package

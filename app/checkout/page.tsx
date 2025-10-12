@@ -73,6 +73,7 @@ export default function CheckoutPage() {
         userId: user.id,
         items: orderItems,
         totalAmount: getTotalPrice(),
+        status: 'pending',
         shippingAddress: {
           name: address.name,
           phone: address.phone,

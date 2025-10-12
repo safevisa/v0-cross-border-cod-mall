@@ -18,7 +18,7 @@ export default function AccountSettingsPage() {
   const [formData, setFormData] = useState({
     name: user?.name || "",
     email: user?.email || "",
-    phone: user?.phone || "",
+    phone: "", // Phone will be managed separately in user context
   })
 
   const handleSave = () => {
@@ -31,7 +31,7 @@ export default function AccountSettingsPage() {
     setFormData({
       name: user?.name || "",
       email: user?.email || "",
-      phone: user?.phone || "",
+      phone: "", // Phone will be managed separately in user context
     })
     setIsEditing(false)
   }
