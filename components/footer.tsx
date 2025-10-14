@@ -62,11 +62,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/category/puer-tea" className="text-muted-foreground hover:text-foreground">
-                  🍵 Pu-er Tea
-                </Link>
-              </li>
-              <li>
                 <Link href="/category/jade-jewelry" className="text-muted-foreground hover:text-foreground">
                   💎 Jade & Jewelry
                 </Link>
