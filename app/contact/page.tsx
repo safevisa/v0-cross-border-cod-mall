@@ -111,7 +111,7 @@ export default function ContactPage() {
                       <Phone className="h-5 w-5 text-primary mt-0.5" />
                       <div>
                         <h4 className="font-medium">Phone Support</h4>
-                        <p className="text-sm text-muted-foreground">+65 1234 5678</p>
+                        <p className="text-sm text-muted-foreground">+65 47648893</p>
                         <p className="text-xs text-muted-foreground">Mon-Fri 9AM-6PM SGT</p>
                       </div>
                     </div>

@@ -62,13 +62,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/category/jade-jewelry" className="text-muted-foreground hover:text-foreground">
-                  💎 Jade & Jewelry
-                </Link>
-              </li>
-              <li>
-                <Link href="/category/teapots" className="text-muted-foreground hover:text-foreground">
-                  🫖 Purple Clay Teapots
+                <Link href="/category/creative-decor" className="text-muted-foreground hover:text-foreground">
+                  🎨 Creative Decor
                 </Link>
               </li>
             </ul>

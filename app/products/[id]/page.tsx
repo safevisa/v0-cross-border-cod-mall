@@ -3,8 +3,8 @@
 import { notFound } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
-import { use } from "react"
-import { Star, ShoppingCart, Heart, Share2, Package, Shield, ArrowLeft } from "lucide-react"
+import { use, useState } from "react"
+import { ShoppingCart, Heart, Share2, Package, Shield, ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
@@ -20,6 +20,9 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
   const { addToCart } = useCart()
   const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist()
   const product = getProductById(resolvedParams.id)
+  
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [selectedSize, setSelectedSize] = useState<string>("")
 
   if (!product) {
     return (
@@ -39,6 +42,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
     )
   }
 
+  const images = product.images || [product.image]
   const relatedProducts = getProductsByCategory(product.category)
     .filter((p) => p.id !== product.id)
     .slice(0, 4)
@@ -65,7 +69,6 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
         console.log('Error sharing:', error)
       }
     } else {
-      // Fallback: copy to clipboard
       try {
         await navigator.clipboard.writeText(window.location.href)
         alert('Product link copied to clipboard!')
@@ -73,6 +76,22 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
         console.log('Error copying to clipboard:', error)
       }
     }
+  }
+
+  const handleAddToCart = () => {
+    if (product.sizes && product.sizes.length > 0 && !selectedSize) {
+      alert('Please select a size')
+      return
+    }
+    addToCart(product)
+  }
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % images.length)
+  }
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length)
   }
 
   return (
@@ -89,134 +108,199 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
           </Button>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {/* Product Image */}
-            <div className="relative aspect-square rounded-lg overflow-hidden bg-muted">
-              <Image src={product.image || "/placeholder.svg"} alt={product.name} fill className="object-cover" />
-              {product.originalPrice && (
-                <Badge className="absolute top-4 left-4 bg-destructive">
-                  Save ${(product.originalPrice - product.price).toFixed(2)}
-                </Badge>
+            {/* Product Images Gallery */}
+            <div className="space-y-4">
+              {/* Main Image */}
+              <div className="relative aspect-square rounded-lg overflow-hidden bg-muted">
+                <Image 
+                  src={images[currentImageIndex] || "/placeholder.svg"} 
+                  alt={product.name} 
+                  fill 
+                  className="object-cover" 
+                />
+                {product.originalPrice && (
+                  <Badge className="absolute top-4 left-4 bg-destructive">
+                    Save ${(product.originalPrice - product.price).toFixed(2)}
+                  </Badge>
+                )}
+                {!product.inStock && (
+                  <Badge className="absolute top-4 right-4 bg-destructive">Out of Stock</Badge>
+                )}
+                
+                {/* Navigation Arrows */}
+                {images.length > 1 && (
+                  <>
+                    <Button
+                      variant="secondary"
+                      size="icon"
+                      className="absolute left-2 top-1/2 -translate-y-1/2 opacity-70 hover:opacity-100"
+                      onClick={prevImage}
+                    >
+                      <ChevronLeft className="h-4 w-4" />
+                    </Button>
+                    <Button
+                      variant="secondary"
+                      size="icon"
+                      className="absolute right-2 top-1/2 -translate-y-1/2 opacity-70 hover:opacity-100"
+                      onClick={nextImage}
+                    >
+                      <ChevronRight className="h-4 w-4" />
+                    </Button>
+                  </>
+                )}
+              </div>
+              
+              {/* Thumbnail Images */}
+              {images.length > 1 && (
+                <div className="grid grid-cols-6 gap-2">
+                  {images.map((img, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`relative aspect-square rounded overflow-hidden border-2 ${
+                        currentImageIndex === index ? 'border-primary' : 'border-transparent'
+                      }`}
+                    >
+                      <Image 
+                        src={img || "/placeholder.svg"} 
+                        alt={`${product.name} ${index + 1}`} 
+                        fill 
+                        className="object-cover" 
+                      />
+                    </button>
+                  ))}
+                </div>
               )}
             </div>
 
             {/* Product Info */}
-            <div className="flex flex-col gap-6">
+            <div className="space-y-6">
               <div>
                 <h1 className="text-3xl font-bold mb-2">{product.name}</h1>
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="flex items-center gap-1">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`h-4 w-4 ${i < Math.floor(product.rating) ? "fill-primary text-primary" : "text-muted-foreground"}`}
-                      />
-                    ))}
-                    <span className="text-sm text-muted-foreground ml-2">
-                      {product.rating} ({product.reviews} reviews)
-                    </span>
+                  <div className="text-3xl font-bold text-primary">
+                    ${product.price.toFixed(2)}
                   </div>
-                  {product.inStock ? (
-                    <Badge variant="outline" className="text-green-600 border-green-600">
-                      In Stock
-                    </Badge>
-                  ) : (
-                    <Badge variant="outline" className="text-destructive border-destructive">
-                      Out of Stock
-                    </Badge>
+                  {product.originalPrice && (
+                    <div className="text-xl text-muted-foreground line-through">
+                      ${product.originalPrice.toFixed(2)}
+                    </div>
                   )}
                 </div>
-              </div>
-
-              <div className="flex items-baseline gap-3">
-                <span className="text-4xl font-bold">${product.price.toFixed(2)}</span>
-                {product.originalPrice && (
-                  <span className="text-xl text-muted-foreground line-through">
-                    ${product.originalPrice.toFixed(2)}
-                  </span>
+                {product.inStock ? (
+                  <Badge variant="secondary" className="bg-green-100 text-green-800">In Stock</Badge>
+                ) : (
+                  <Badge variant="secondary" className="bg-red-100 text-red-800">Out of Stock</Badge>
                 )}
               </div>
 
-              <p className="text-muted-foreground">{product.description}</p>
+              <Separator />
 
+              <div>
+                <h3 className="font-semibold mb-2">Description</h3>
+                <p className="text-muted-foreground">{product.description}</p>
+              </div>
+
+              {/* Size Selection */}
+              {product.sizes && product.sizes.length > 0 && (
+                <div>
+                  <h3 className="font-semibold mb-3">Select Size</h3>
+                  <div className="grid grid-cols-6 gap-2">
+                    {product.sizes.map((size) => (
+                      <button
+                        key={size}
+                        onClick={() => setSelectedSize(size)}
+                        className={`px-4 py-2 border rounded-lg font-medium transition-colors ${
+                          selectedSize === size
+                            ? 'border-primary bg-primary text-primary-foreground'
+                            : 'border-gray-300 hover:border-primary'
+                        }`}
+                      >
+                        {size}
+                      </button>
+                    ))}
+                  </div>
+                  {selectedSize && (
+                    <p className="text-sm text-muted-foreground mt-2">Selected: {selectedSize}</p>
+                  )}
+                </div>
+              )}
+
+              {/* Action Buttons */}
               <div className="flex gap-3">
                 <Button 
-                  size="lg" 
                   className="flex-1" 
+                  size="lg" 
+                  onClick={handleAddToCart}
                   disabled={!product.inStock}
-                  onClick={() => addToCart(product)}
                 >
                   <ShoppingCart className="mr-2 h-5 w-5" />
                   Add to Cart
                 </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  onClick={handleWishlistToggle}
-                  className={isInWishlist(product.id) ? "bg-red-50 border-red-200 text-red-600" : ""}
-                >
-                  <Heart className={`h-5 w-5 ${isInWishlist(product.id) ? "fill-current" : ""}`} />
+                <Button variant="outline" size="lg" onClick={handleWishlistToggle}>
+                  <Heart className={`h-5 w-5 ${isInWishlist(product.id) ? 'fill-current text-red-500' : ''}`} />
                 </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  onClick={handleShare}
-                >
+                <Button variant="outline" size="lg" onClick={handleShare}>
                   <Share2 className="h-5 w-5" />
                 </Button>
               </div>
 
-              <div className="flex gap-4 p-4 rounded-lg bg-muted/50">
-                <div className="flex items-center gap-2">
-                  <Package className="h-5 w-5 text-primary" />
-                  <span className="text-sm">RFID Tracking</span>
+              {/* Features */}
+              <div className="bg-muted/50 p-4 rounded-lg">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="flex items-center gap-2">
+                    <Package className="h-5 w-5 text-primary" />
+                    <span className="text-sm">RFID Tracking</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Shield className="h-5 w-5 text-primary" />
+                    <span className="text-sm">COD Available</span>
+                  </div>
                 </div>
-                <Separator orientation="vertical" />
-                <div className="flex items-center gap-2">
-                  <Shield className="h-5 w-5 text-primary" />
-                  <span className="text-sm">COD Available</span>
+              </div>
+
+              {/* Key Features */}
+              {product.features && product.features.length > 0 && (
+                <div>
+                  <h3 className="font-semibold mb-3">Key Features</h3>
+                  <ul className="space-y-2">
+                    {product.features.map((feature, index) => (
+                      <li key={index} className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span className="text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
+              )}
 
-              <Separator />
-
-              <div>
-                <h3 className="font-semibold mb-3">Key Features</h3>
-                <ul className="space-y-2">
-                  {product.features.map((feature, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <span className="text-primary mt-1">•</span>
-                      <span className="text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <Separator />
-
-              <div>
-                <h3 className="font-semibold mb-3">Specifications</h3>
-                <dl className="grid grid-cols-2 gap-3">
-                  {Object.entries(product.specifications).map(([key, value]) => (
-                    <div key={key}>
-                      <dt className="text-sm text-muted-foreground">{key}</dt>
-                      <dd className="text-sm font-medium">{value}</dd>
-                    </div>
-                  ))}
-                </dl>
-              </div>
+              {/* Specifications */}
+              {product.specifications && Object.keys(product.specifications).length > 0 && (
+                <div>
+                  <h3 className="font-semibold mb-3">Specifications</h3>
+                  <div className="grid grid-cols-2 gap-3">
+                    {Object.entries(product.specifications).map(([key, value]) => (
+                      <div key={key} className="border rounded-lg p-3">
+                        <div className="text-xs text-muted-foreground mb-1">{key}</div>
+                        <div className="text-sm font-medium">{value}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
           {/* Related Products */}
           {relatedProducts.length > 0 && (
-            <section>
+            <div>
               <h2 className="text-2xl font-bold mb-6">Related Products</h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-                {relatedProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {relatedProducts.map((relatedProduct) => (
+                  <ProductCard key={relatedProduct.id} product={relatedProduct} />
                 ))}
               </div>
-            </section>
+            </div>
           )}
         </div>
       </main>

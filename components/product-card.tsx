@@ -78,7 +78,6 @@ export function ProductCard({ product }: ProductCardProps) {
               />
             ))}
           </div>
-          <span className="text-xs text-muted-foreground">({product.reviews})</span>
         </div>
 
         <div className="flex items-baseline gap-2">

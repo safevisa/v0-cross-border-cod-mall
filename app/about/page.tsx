@@ -159,8 +159,7 @@ export default function AboutUsPage() {
                         <li>• Men's & Women's Fashion</li>
                         <li>• Outdoor & Camping Equipment</li>
                         <li>• Sports & Fitness Gear</li>
-                        <li>• Authentic Jade & Jewelry</li>
-                        <li>• Purple Clay Teapots & Accessories</li>
+                        <li>• Creative Decor & Accessories</li>
                       </ul>
                     </div>
                     <div>
