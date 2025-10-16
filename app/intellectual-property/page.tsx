@@ -10,7 +10,7 @@ export default function IntellectualPropertyPage() {
     <div className="flex min-h-screen flex-col">
       <Header />
 
-      <main className="flex-1">
+      <main className="flex-1 container mx-auto">
         <div className="container py-8">
           <div className="flex items-center gap-4 mb-6">
             <Button variant="ghost" asChild>
