@@ -15,7 +15,7 @@ export default function HomePage() {
         <section className="border-b bg-gradient-to-r from-primary/5 via-background to-accent/5 py-8">
           <div className="container">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
                   <Package className="h-5 w-5 text-primary" />
                 </div>
@@ -25,7 +25,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
                   <CreditCard className="h-5 w-5 text-primary" />
                 </div>
@@ -35,7 +35,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
                   <Truck className="h-5 w-5 text-primary" />
                 </div>
@@ -45,7 +45,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
                   <Shield className="h-5 w-5 text-primary" />
                 </div>
@@ -63,7 +63,7 @@ export default function HomePage() {
           if (categoryProducts.length === 0) return null
 
           return (
-            <section key={category.id} className="py-12 border-b">
+            <section key={category.id} className="py-12 border-b flex justify-around">
               <div className="container">
                 <div className="flex items-center justify-between mb-6">
                   <h2 className="text-2xl font-bold flex items-center gap-2">
