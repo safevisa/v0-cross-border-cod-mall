@@ -98,7 +98,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
     <div className="flex min-h-screen flex-col">
       <Header />
 
-      <main className="flex-1">
+      <main className="flex-1 flex justify-center">
         <div className="container py-8">
           <Button variant="ghost" asChild className="mb-6">
             <Link href="/">
