@@ -34,7 +34,7 @@ export default function DataProtectionPage() {
                 </CardHeader>
                 <CardContent className="prose prose-sm max-w-none">
                   <p className="text-sm text-muted-foreground mb-6">
-                    Last updated: January 2025
+                    Last updated: {new Date().toLocaleString('en-US', { month: 'long' })} {new Date().getFullYear()}
                   </p>
 
                   <section className="mb-8">

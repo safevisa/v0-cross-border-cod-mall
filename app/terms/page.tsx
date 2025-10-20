@@ -23,14 +23,13 @@ export default function TermsOfServicePage() {
 
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl font-bold mb-8">Terms of Service</h1>
-            
             <Card>
               <CardHeader>
                 <CardTitle>CODPAL Terms of Service</CardTitle>
               </CardHeader>
               <CardContent className="prose prose-sm max-w-none">
                 <p className="text-sm text-muted-foreground mb-6">
-                  Last updated: January 2025
+                  Last updated: {new Date().toLocaleString('en-US', { month: 'long' })} {new Date().getFullYear()}
                 </p>
 
                 <section className="mb-8">
@@ -144,6 +143,19 @@ export default function TermsOfServicePage() {
                     <p><strong>Email:</strong> legal@codpal.com</p>
                   </div>
                 </section>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Government Law</CardTitle>
+              </CardHeader>
+              <CardContent className="prose prose-sm max-w-none">
+                {/* <p className="text-sm text-muted-foreground mb-6">
+                  Last updated: {new Date().toLocaleString('en-US', { month: 'long' })} {new Date().getFullYear()}
+                </p> */}
+                <p className="text-sm text-muted-foreground mb-6">
+                  The Mall shall not be liable for any damages or losses arising from the use or inability to use the services provided by the Mall, except in cases of intentional misconduct or gross negligence. The Mall shall not be responsible for the actions or omissions of its users, and users shall be solely liable for any damages or losses resulting from their own illegal or unauthorized activities
+                </p>
               </CardContent>
             </Card>
           </div>
