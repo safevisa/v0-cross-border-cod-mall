@@ -64,7 +64,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
       <CardContent className="p-4">
         <Link href={`/products/${product.id}`}>
-          <h3 className="font-semibold line-clamp-2 mb-2 group-hover:text-primary transition-colors">{product.name}</h3>
+          <h3 className="font-semibold line-clamp-1 mb-2 group-hover:text-primary transition-colors">{product.name}</h3>
         </Link>
 
         <div className="flex items-center gap-1 mb-2">
