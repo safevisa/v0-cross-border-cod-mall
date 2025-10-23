@@ -329,7 +329,7 @@ export const products: Product[] = [
         inStock: true,
     description: "Versatile pants for office and casual occasions.",
     features: ["Stretch fabric", "Wrinkle-resistant", "4-way stretch", "Multiple pockets"],
-    specifications: { Material: "68% Polyester, 29% Rayon, 3% Spandex", Sizes: "28-40", Colors: "6 options" },
+    specifications: { Material: "68% Polyester, 29% Rayon, 3% Spandex", Sizes: "XS", Colors: "6 options" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
   },
   {
