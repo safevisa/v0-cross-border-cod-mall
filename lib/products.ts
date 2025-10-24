@@ -12,6 +12,9 @@ export interface Product {
   features: string[]
   specifications: Record<string, string>
   sizes?: string[]
+  size?: string
+  colors?: string[]
+  color?: string
 }
 
 export const categories = [
@@ -35,14 +38,14 @@ export const products: Product[] = [
     images: ["/gods/portable-stainless-steel-cutlery-c.jpg", "/gods/portable-stainless-steel-cutlery-c1.jpg", "/gods/portable-stainless-steel-cutlery-c2.jpg", "/gods/portable-stainless-steel-cutlery-c3.jpg", "/gods/portable-stainless-steel-cutlery-c4.jpg", "/gods/portable-stainless-steel-cutlery-c5.jpg"],
     rating: 4.8,
         inStock: true,
-    description: "Eco-friendly stainless steel cutlery set perfect for travel, office, or outdoor dining.",
+    description: "Environmentally friendly glass tableware set, perfect for travel, office use or outdoor dining.",
     features: [
-      "Food-grade stainless steel",
+      "Food-grade rubber",
       "Portable carrying case",
       "Dishwasher safe",
       "Includes fork, spoon, knife, chopsticks",
     ],
-    specifications: { Material: "Stainless Steel", Weight: "180g", Size: "19cm x 6cm" },
+    specifications: { Material: "Glass, rubber", Weight: "180g", Size: "19cm x 6cm" },
   },
   {
     id: "de-002",
@@ -56,7 +59,7 @@ export const products: Product[] = [
         inStock: true,
     description: "Collapsible silicone containers that save space and keep food fresh.",
     features: ["BPA-free silicone", "Microwave & freezer safe", "Collapsible design", "Set of 4 sizes"],
-    specifications: { Material: "Food-grade Silicone", Capacity: "350ml-1200ml", Temperature: "-40°C to 230°C" },
+    specifications: { Material: "Food-grade Silicone", Temperature: "-40°C to 230°C" },
   },
   {
     id: "de-003",
@@ -96,7 +99,7 @@ export const products: Product[] = [
         inStock: true,
     description: "Complete packing cube set to organize luggage efficiently.",
     features: ["7-piece set", "Waterproof material", "Mesh top panel", "Multiple sizes"],
-    specifications: { Material: "Nylon", Set: "7 pieces", Colors: "Multiple options" },
+    specifications: { Material: "Nylon", Colors: "Multiple options" },
   },
   {
     id: "de-006",
@@ -309,12 +312,12 @@ export const products: Product[] = [
     price: 24.99,
     originalPrice: 39.99,
     image: "/gods/mens-quick-dry-performance-polo-shirt.jpg",
-    images: ["/gods/mens-quick-dry-performance-polo-shirt.jpg", "/gods/mens-quick-dry-performance-polo-shirt1.jpg", "/gods/mens-quick-dry-performance-polo-shirt2.jpg", "/gods/mens-quick-dry-performance-polo-shirt3.jpg", "/gods/mens-quick-dry-performance-polo-shirt4.jpg", "/gods/mens-quick-dry-performance-polo-shirt5.jpg"],
+    images: ["/gods/mens-quick-dry-performance-polo-shirt.jpg", "/gods/mens-quick-dry-performance-polo-shirt1.jpg", "/gods/mens-quick-dry-performance-polo-shirt2.jpg", "/gods/mens-quick-dry-performance-polo-shirt3.jpg", "/gods/mens-quick-dry-performance-polo-shirt4.jpg"],
     rating: 4.7,
         inStock: true,
     description: "Breathable polo perfect for sports and casual wear.",
     features: ["Moisture-wicking fabric", "UV protection", "Anti-odor technology", "Multiple colors"],
-    specifications: { Material: "95% Polyester, 5% Spandex", Sizes: "S-3XL", Care: "Machine washable" },
+    specifications: { Material: "95% Polyester, 5% Spandex", Sizes: "S-2XL", Care: "Machine washable" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
   },
   {
@@ -329,7 +332,7 @@ export const products: Product[] = [
         inStock: true,
     description: "Versatile pants for office and casual occasions.",
     features: ["Stretch fabric", "Wrinkle-resistant", "4-way stretch", "Multiple pockets"],
-    specifications: { Material: "68% Polyester, 29% Rayon, 3% Spandex", Sizes: "XS", Colors: "6 options" },
+    specifications: { Material: "68% Polyester, 29% Rayon, 3% Spandex",},
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
   },
   {
@@ -636,6 +639,7 @@ export const products: Product[] = [
     features: ["UPF 50+ protection", "Breathable fabric", "Long sleeves", "Multiple colors"],
     specifications: { Material: "95% Polyester, 5% Spandex", Protection: "UPF 50+", Sizes: "S-XL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Pink", "Green", "Black", "White", "Purple", "Yellow"],
   },
   {
     id: "wf-004",

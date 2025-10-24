@@ -61,7 +61,7 @@ export default function CartPage() {
                       </div>
                       <div className="flex-1">
                         <h3 className="font-semibold">{item.product.name}</h3>
-                        <p className="text-sm text-muted-foreground">${item.product.price.toFixed(2)}</p>
+                        <p className="text-sm text-muted-foreground">${item.product.price.toFixed(2)} {item.product.size} {item.product.color}</p>
                         <div className="flex items-center gap-2 mt-2">
                           <Button 
                             size="sm" 

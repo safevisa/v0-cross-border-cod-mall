@@ -23,6 +23,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
   
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [selectedSize, setSelectedSize] = useState<string>("")
+  const [selectedColor, setSelectedColor] = useState<string>("")
 
   if (!product) {
     return (
@@ -83,7 +84,12 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
       alert('Please select a size')
       return
     }
-    addToCart(product)
+    if (product.colors && product.colors.length > 0 && !selectedColor) {
+      alert('Please select a color')
+      return
+    }
+    
+    addToCart({ ...product, size: selectedSize, color: selectedColor })
   }
 
   const nextImage = () => {
@@ -200,6 +206,30 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                 <h3 className="font-semibold mb-2">Description</h3>
                 <p className="text-muted-foreground">{product.description}</p>
               </div>
+              {/* Color Selection */}
+              {product.colors && product.colors.length > 0 && (
+                <div>
+                  <h3 className="font-semibold mb-3">Select Color</h3>
+                  <div className="flex gap-2">
+                    {product.colors.map((color) => (
+                      <button
+                        key={color}
+                        onClick={() => setSelectedColor(color)}
+                        className={`px-4 py-2 border rounded-lg font-medium transition-colors ${
+                          selectedColor === color
+                            ? 'border-primary bg-primary text-primary-foreground'
+                            : 'border-gray-300 hover:border-primary'
+                        }`}
+                      >
+                        {color}
+                      </button>
+                    ))}
+                  </div>
+                  {selectedColor && (
+                    <p className="text-sm text-muted-foreground mt-2">Selected: {selectedColor}</p>
+                  )}
+                </div>
+              )}
 
               {/* Size Selection */}
               {product.sizes && product.sizes.length > 0 && (
