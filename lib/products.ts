@@ -71,7 +71,7 @@ export const products: Product[] = [
     rating: 4.6,
         inStock: true,
     description: "5-in-1 hangers that maximize closet space and keep clothes organized.",
-    features: ["Holds 5 garments", "Non-slip design", "Durable plastic", "360° rotating hook"],
+    features: ["Can hold multiple pieces of clothing", "Anti-slip design", "Durable material"],
     specifications: { Material: "ABS Plastic", Dimensions: "42cm x 18cm", "Load Capacity": "15kg" },
   },
   {
@@ -83,9 +83,9 @@ export const products: Product[] = [
     images: ["/gods/compressed-cotton-travel-towels-in-packaging.jpg", "/gods/compressed-cotton-travel-towels-in-packaging1.jpg", "/gods/compressed-cotton-travel-towels-in-packaging2.jpg", "/gods/compressed-cotton-travel-towels-in-packaging3.jpg", "/gods/compressed-cotton-travel-towels-in-packaging4.jpg", "/gods/compressed-cotton-travel-towels-in-packaging5.jpg"],
     rating: 4.5,
         inStock: true,
-    description: "Ultra-compact towels that expand when wet, perfect for travel.",
+    description: "Portable towel, extremely soft, perfect for travel use.",
     features: ["100% cotton", "Expands to full size", "Quick-dry", "Pack of 10"],
-    specifications: { Material: "100% Cotton", "Compressed Size": "3cm x 3cm", "Expanded Size": "30cm x 30cm" },
+    specifications: { Material: "100% Cotton", Package: 'Ten pieces per pack', Size: '15cm x 30cm' }
   },
   {
     id: "de-005",
@@ -94,12 +94,13 @@ export const products: Product[] = [
     price: 18.99,
     originalPrice: 29.99,
     image: "/gods/travel-packing-cubes-organizer-set.jpg",
-    images: ["/gods/travel-packing-cubes-organizer-set.jpg", "/gods/travel-packing-cubes-organizer-set1.jpg", "/gods/travel-packing-cubes-organizer-set2.jpg", "/gods/travel-packing-cubes-organizer-set3.jpg", "/gods/travel-packing-cubes-organizer-set2.jpg", "/gods/travel-packing-cubes-organizer-set1.jpg"],
+    images: ["/gods/travel-packing-cubes-organizer-set.jpg", "/gods/travel-packing-cubes-organizer-set3.jpg", "/gods/travel-packing-cubes-organizer-set2.jpg", "/gods/travel-packing-cubes-organizer-set1.jpg"],
     rating: 4.9,
         inStock: true,
-    description: "Complete packing cube set to organize luggage efficiently.",
-    features: ["7-piece set", "Waterproof material", "Mesh top panel", "Multiple sizes"],
-    specifications: { Material: "Nylon", Colors: "Multiple options" },
+    description: "Extra-large capacity leather luggage bag, capable of efficiently organizing luggage items.",
+    features: ["Multiple colors", "Waterproof material", "Large capacity",  "Leather material"],
+    specifications: { Material: "Leather", Colors: "Multiple options" },
+    colors: ["Black", "White", "Pink", "Brown"],
   },
   {
     id: "de-006",
@@ -111,7 +112,7 @@ export const products: Product[] = [
     images: ["/gods/compact-robot-vacuum-cleaner-for-home.jpg", "/gods/compact-robot-vacuum-cleaner-for-home1.jpg", "/gods/compact-robot-vacuum-cleaner-for-home2.jpg", "/gods/compact-robot-vacuum-cleaner-for-home3.jpg", "/gods/compact-robot-vacuum-cleaner-for-home4.jpg", "/gods/compact-robot-vacuum-cleaner-for-home5.jpg"],
     rating: 4.4,
         inStock: true,
-    description: "Compact automatic vacuum for daily floor cleaning.",
+    description: "Portable automatic vacuum cleaner, suitable for daily cleaning.",
     features: ["Auto-charging", "Low noise", "Smart navigation", "HEPA filter"],
     specifications: { "Battery Life": "90 minutes", "Noise Level": "55dB", Diameter: "28cm" },
   },
@@ -153,6 +154,7 @@ export const products: Product[] = [
         inStock: true,
     description: "Multi-functional lamp with phone charging and adjustable brightness.",
     features: ["Wireless charging pad", "3 color modes", "Touch control", "USB port"],
+    colors: ["Black", "Gold", "White"],
     specifications: { Power: "15W", "Color Temperature": "3000K-6000K", "Charging Output": "10W" },
   },
   {
@@ -161,12 +163,12 @@ export const products: Product[] = [
     category: "daily-essentials",
     price: 16.99,
     image: "/gods/insulated-stainless-steel-lunch-box-container.jpg",
-    images: ["/gods/insulated-stainless-steel-lunch-box-container.jpg", "/gods/insulated-stainless-steel-lunch-box-container1.jpg", "/gods/insulated-stainless-steel-lunch-box-container2.jpg", "/gods/insulated-stainless-steel-lunch-box-container3.jpg", "/gods/insulated-stainless-steel-lunch-box-container4.jpg", "/gods/insulated-stainless-steel-lunch-box-container5.jpg"],
+    images: ["/gods/insulated-stainless-steel-lunch-box-container.jpg", "/gods/insulated-stainless-steel-lunch-box-container1.jpg", "/gods/insulated-stainless-steel-lunch-box-container2.jpg", "/gods/insulated-stainless-steel-lunch-box-container3.jpg", "/gods/insulated-stainless-steel-lunch-box-container4.jpg"],
     rating: 4.5,
         inStock: true,
     description: "Keep meals hot or cold for hours with this premium lunch box.",
     features: ["Double-wall insulation", "Leak-proof", "Stainless steel", "2 compartments"],
-    specifications: { Capacity: "1.2L", Material: "Stainless Steel 304", Dimensions: "20cm x 15cm x 8cm" },
+    specifications: { Capacity: "1.2L", Material: "Stainless Steel 304", Dimensions: "11cm x 11cm x 20cm" },
   },
   {
     id: "de-011",
@@ -187,12 +189,12 @@ export const products: Product[] = [
     category: "daily-essentials",
     price: 19.99,
     image: "/gods/bamboo-drawer-divider-organizer-set.jpg",
-    images: ["/gods/bamboo-drawer-divider-organizer-set.jpg", "/gods/bamboo-drawer-divider-organizer-set1.jpg", "/gods/bamboo-drawer-divider-organizer-set2.jpg", "/gods/bamboo-drawer-divider-organizer-set3.jpg", "/gods/bamboo-drawer-divider-organizer-set4.jpg", "/gods/bamboo-drawer-divider-organizer-set5.jpg"],
+    images: ["/gods/bamboo-drawer-divider-organizer-set.jpg", "/gods/bamboo-drawer-divider-organizer-set1.jpg", "/gods/bamboo-drawer-divider-organizer-set2.jpg", "/gods/bamboo-drawer-divider-organizer-set5.jpg"],
     rating: 4.8,
         inStock: true,
     description: "Eco-friendly organizers for kitchen and office drawers.",
-    features: ["Natural bamboo", "Adjustable dividers", "Set of 6", "Easy to clean"],
-    specifications: { Material: "Bamboo", Sizes: "Various", Finish: "Natural" },
+    features: ["Natural bamboo", "Adjustable dividers", "Easy to clean"],
+    specifications: { Material: "Bamboo", Finish: "Natural" },
   },
   {
     id: "de-013",
@@ -205,6 +207,7 @@ export const products: Product[] = [
         inStock: true,
     description: "Open wine bottles effortlessly with this electric opener.",
     features: ["Opens 30+ bottles per charge", "Foil cutter included", "LED indicator", "Elegant design"],
+    colors: ["Black", "Silver"],
     specifications: {
       Power: "Rechargeable battery",
       Material: "Stainless Steel",
@@ -220,6 +223,7 @@ export const products: Product[] = [
     images: ["/gods/wall-mounted-magnetic-knife-holder-strip.jpg", "/gods/wall-mounted-magnetic-knife-holder-strip1.jpg", "/gods/wall-mounted-magnetic-knife-holder-strip2.jpg", "/gods/wall-mounted-magnetic-knife-holder-strip3.jpg", "/gods/wall-mounted-magnetic-knife-holder-strip4.jpg", "/gods/wall-mounted-magnetic-knife-holder-strip5.jpg"],
     rating: 4.7,
         inStock: true,
+    colors: ['Ash-gray', 'Black', 'White'],    
     description: "Space-saving magnetic strip for kitchen knives.",
     features: ["Strong magnets", "Easy installation", "Bamboo or stainless steel", "40cm length"],
     specifications: { Length: "40cm", Material: "Bamboo/Stainless Steel", "Mounting Type": "Wall-mounted" },
@@ -233,9 +237,10 @@ export const products: Product[] = [
     images: ["/gods/rust-proof-shower-caddy-organizer-shelves.jpg", "/gods/rust-proof-shower-caddy-organizer-shelves1.jpg", "/gods/rust-proof-shower-caddy-organizer-shelves2.jpg", "/gods/rust-proof-shower-caddy-organizer-shelves3.jpg", "/gods/rust-proof-shower-caddy-organizer-shelves4.jpg", "/gods/rust-proof-shower-caddy-organizer-shelves5.jpg"],
     rating: 4.5,
         inStock: true,
+    colors: ['Black', 'White', "Brown", "Gray"],    
     description: "Rust-proof shower organizer with multiple shelves.",
-    features: ["Stainless steel", "Adjustable height", "4 shelves", "No drilling required"],
-    specifications: { Material: "Stainless Steel 304", Height: "Adjustable 180-300cm", Shelves: "4 tiers" },
+    features: [ "Canvas material", "Can increase storage capacity", "Adjustable divider", "No need for drilling"],
+    specifications: { Material: "Canvas", StoragePosition: "Adjustable", Shelf: "Adjustable" },
   },
   {
     id: "de-016",
@@ -260,6 +265,7 @@ export const products: Product[] = [
     rating: 4.4,
         inStock: true,
     description: "Hide and organize messy cables and power strips.",
+    colors: ['Black', 'White'],
     features: ["Large capacity", "Heat dissipation holes", "Non-slip base", "Modern design"],
     specifications: { Dimensions: "32cm x 13cm x 13cm", Material: "ABS Plastic", Color: "White/Black" },
   },
@@ -274,7 +280,8 @@ export const products: Product[] = [
         inStock: true,
     description: "Eco-friendly alternative to plastic bags.",
     features: ["Set of 6", "Leak-proof seal", "Microwave safe", "Easy to clean"],
-    specifications: { Material: "Food-grade Silicone", Sizes: "3 sizes included", Temperature: "-40°C to 230°C" },
+    colors: ["Green", "White", "Croci", "Blue", "Purplish Red"],
+    specifications: { Material: "Food-grade Silicone", Temperature: "-40°C to 230°C" },
   },
   {
     id: "de-019",
@@ -300,10 +307,10 @@ export const products: Product[] = [
     rating: 4.6,
         inStock: true,
     description: "Space-saving laundry basket that folds flat.",
+    colors: ["Gray", "Green", "Yellow", "White"],
     features: ["Collapsible design", "Reinforced handles", "Waterproof lining", "Large capacity"],
     specifications: { Capacity: "60L", Material: "Oxford Fabric", Dimensions: "40cm x 30cm x 50cm" },
   },
-
   // Men's Fashion (20 products)
   {
     id: "mf-001",
@@ -316,6 +323,7 @@ export const products: Product[] = [
     rating: 4.7,
         inStock: true,
     description: "Breathable polo perfect for sports and casual wear.",
+    colors: ["Black", "Gray"],
     features: ["Moisture-wicking fabric", "UV protection", "Anti-odor technology", "Multiple colors"],
     specifications: { Material: "95% Polyester, 5% Spandex", Sizes: "S-2XL", Care: "Machine washable" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
@@ -347,8 +355,9 @@ export const products: Product[] = [
         inStock: true,
     description: "Packable down jacket for cold weather.",
     features: ["90% down fill", "Water-resistant", "Packable design", "Lightweight"],
-    specifications: { Fill: "90% Duck Down", Weight: "350g", Sizes: "S-3XL" },
+    specifications: { Fill: "90% Duck Down", Weight: "350g", Sizes: "S-2XL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Black", "Gray", "Brown"],
   },
   {
     id: "mf-004",
@@ -366,6 +375,7 @@ export const products: Product[] = [
       Sizes: "One size fits most",
       Package: "6 pairs",
     },
+    colors: ["Black", "White", "Gray", "Brown", "Skin"],
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
   },
   {
@@ -374,10 +384,11 @@ export const products: Product[] = [
     category: "mens-fashion",
     price: 29.99,
     image: "/gods/mens-classic-denim-button-down-shirt.jpg",
-    images: ["/gods/mens-classic-denim-button-down-shirt.jpg", "/gods/mens-classic-denim-button-down-shirt1.jpg", "/gods/mens-classic-denim-button-down-shirt2.jpg", "/gods/mens-classic-denim-button-down-shirt3.jpg", "/gods/mens-classic-denim-button-down-shirt4.jpg", "/gods/mens-classic-denim-button-down-shirt5.jpg"],
+    images: ["/gods/mens-classic-denim-button-down-shirt.jpg", "/gods/mens-classic-denim-button-down-shirt2.jpg", "/gods/mens-classic-denim-button-down-shirt3.jpg", "/gods/mens-classic-denim-button-down-shirt4.jpg", "/gods/mens-classic-denim-button-down-shirt5.jpg"],
     rating: 4.7,
         inStock: true,
     description: "Timeless denim shirt for casual style.",
+    colors: ["Dark Blue", "Light Blue"],
     features: ["100% cotton denim", "Button-down collar", "Chest pockets", "Regular fit"],
     specifications: { Material: "100% Cotton", Weight: "8oz denim", Sizes: "S-XXL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
@@ -395,6 +406,7 @@ export const products: Product[] = [
     features: ["Quick-dry fabric", "Zippered pockets", "Elastic waistband", "Reflective details"],
     specifications: { Material: "100% Polyester", Inseam: "7 inches", Sizes: "S-XXL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Gray", "White", "Brown", "Black", "Blue"],
   },
   {
     id: "mf-007",
@@ -409,6 +421,7 @@ export const products: Product[] = [
     features: ["Genuine leather", "Automatic buckle", "Adjustable length", "Gift box included"],
     specifications: { Material: "Genuine Leather", Width: "3.5cm", Length: "Adjustable 110-130cm" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Black", "Brown", "Gray", "Red"]
   },
   {
     id: "mf-008",
@@ -424,6 +437,7 @@ export const products: Product[] = [
     features: ["100% merino wool", "Temperature regulating", "Odor-resistant", "Classic fit"],
     specifications: { Material: "100% Merino Wool", Weight: "Midweight", Sizes: "S-XXL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Black", "Gray", "White", "Blue", "Green", "Yellow", "Pink", "Purple", "Brown"],
   },
   {
     id: "mf-009",
@@ -453,6 +467,7 @@ export const products: Product[] = [
     features: ["Water-resistant", "Packable hood", "Zippered pockets", "Adjustable cuffs"],
     specifications: { Material: "100% Nylon", Weight: "280g", Sizes: "S-XXL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Black", "Gray", "Brown", "Purple"]
   },
   {
     id: "mf-011",
@@ -467,6 +482,7 @@ export const products: Product[] = [
     features: ["100% cotton oxford", "Button-down collar", "Wrinkle-resistant", "Regular fit"],
     specifications: { Material: "100% Cotton", Weave: "Oxford", Sizes: "S-XXL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Brown", "Black", "silver"]
   },
   {
     id: "mf-012",
@@ -479,8 +495,9 @@ export const products: Product[] = [
         inStock: true,
     description: "Functional cargo shorts for outdoor activities.",
     features: ["8 pockets", "Durable fabric", "Belt included", "Relaxed fit"],
-    specifications: { Material: "100% Cotton", Inseam: "11 inches", Sizes: "30-42" },
+    specifications: { Material: "100% Cotton", Inseam: "11 inches", Sizes: "xs-xxl" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Black", "Green", "Brown", "Purple"]
   },
   {
     id: "mf-013",
@@ -495,6 +512,7 @@ export const products: Product[] = [
     features: ["Fleece-lined", "Moisture-wicking", "Top and bottom set", "Stretchy fabric"],
     specifications: { Material: "92% Polyester, 8% Spandex", Weight: "Heavyweight", Sizes: "S-XXL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Black", "Dark Gray", "Light Gray"]
   },
   {
     id: "mf-014",
@@ -509,6 +527,7 @@ export const products: Product[] = [
     features: ["Soft cotton blend", "Button placket", "Long sleeves", "Multiple colors"],
     specifications: { Material: "60% Cotton, 40% Polyester", Fit: "Regular", Sizes: "S-XXL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Black", "Dark Gray", "Light Gray", "Brown", "Green", "Purple", "Pink"]
   },
   {
     id: "mf-015",
@@ -523,6 +542,7 @@ export const products: Product[] = [
     features: ["Quick-dry fabric", "Mesh lining", "Elastic waistband", "Side pockets"],
     specifications: { Material: "100% Polyester", Inseam: "7 inches", Sizes: "S-XXL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Orange", "Red", "Black", "Blue"]
   },
   {
     id: "mf-016",
@@ -537,6 +557,7 @@ export const products: Product[] = [
     features: ["100% cotton flannel", "Button-down collar", "Chest pockets", "Soft brushed finish"],
     specifications: { Material: "100% Cotton", Weight: "Midweight", Sizes: "S-XXL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Red", "Brown", "Pink", "White"]
   },
   {
     id: "mf-017",
@@ -551,6 +572,7 @@ export const products: Product[] = [
     features: ["Compression fit", "Moisture-wicking", "Flatlock seams", "UV protection"],
     specifications: { Material: "87% Polyester, 13% Spandex", Fit: "Compression", Sizes: "S-XXL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Black", "Dark Gray", "Light Gray"]
   },
   {
     id: "mf-018",
@@ -565,6 +587,7 @@ export const products: Product[] = [
     features: ["Cotton twill", "Classic fit", "Multiple pockets", "Belt loops"],
     specifications: { Material: "100% Cotton", Inseam: "9 inches", Sizes: "30-42" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Black", "Gray", "White"]
   },
   {
     id: "mf-019",
@@ -579,6 +602,7 @@ export const products: Product[] = [
     features: ["Fleece-lined", "Kangaroo pocket", "Adjustable hood", "Ribbed cuffs"],
     specifications: { Material: "80% Cotton, 20% Polyester", Weight: "Heavyweight", Sizes: "S-XXL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Fluorescent Green", "Red", "White", "Blue Red", "Gray", "Number White"]
   },
   {
     id: "mf-020",
@@ -593,8 +617,8 @@ export const products: Product[] = [
     features: ["Moisture-wicking", "Zippered pockets", "Elastic waistband", "Tapered fit"],
     specifications: { Material: "100% Polyester", Fit: "Tapered", Sizes: "S-XXL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Black", "Dark Gray", "Light Gray"]
   },
-
   // Women's Fashion (20 products)
   {
     id: "wf-001",
@@ -625,6 +649,7 @@ export const products: Product[] = [
     features: ["High-rise waist", "4-way stretch", "Slimming fit", "Multiple washes"],
     specifications: { Material: "76% Cotton, 22% Polyester, 2% Spandex", Rise: "High", Sizes: "24-34" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Dark Blue", "Light Blue"]
   },
   {
     id: "wf-003",
@@ -684,6 +709,7 @@ export const products: Product[] = [
     features: ["Soft cotton blend", "Crew neck", "Pack of 3", "Multiple colors"],
     specifications: { Material: "95% Cotton, 5% Spandex", Fit: "Regular", Sizes: "XS-XXL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Black", "White", "Gray", "Brown"]
   },
   {
     id: "wf-007",
@@ -699,6 +725,7 @@ export const products: Product[] = [
     features: ["High-waist design", "Squat-proof", "Hidden pocket", "4-way stretch"],
     specifications: { Material: "87% Nylon, 13% Spandex", Compression: "Medium", Sizes: "XS-XXL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Brown", "Black", "Gray", "Navy", "Pink", "Green"]
   },
   {
     id: "wf-008",
@@ -712,7 +739,7 @@ export const products: Product[] = [
         inStock: true,
     description: "Cozy knit sweater for cool weather.",
     features: ["Soft knit fabric", "Crew neck", "Ribbed cuffs", "Relaxed fit"],
-    specifications: { Material: "60% Cotton, 40% Acrylic", Weight: "Midweight", Sizes: "S-XL" },
+    specifications: { Material: "60% Cotton, 40% Acrylic", Weight: "Midweight", Sizes: "S-XL", Note: "Please note the pattern when making the purchase" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
   },
   {
@@ -729,6 +756,7 @@ export const products: Product[] = [
     features: ["Flowy fabric", "Elastic waistband", "Wide leg", "Wrinkle-resistant"],
     specifications: { Material: "95% Polyester, 5% Spandex", Fit: "Wide leg", Sizes: "XS-XL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Black", "Gray", "Green", "Brown" ]
   },
   {
     id: "wf-010",
@@ -758,6 +786,7 @@ export const products: Product[] = [
     features: ["Silk blend fabric", "Adjustable straps", "V-neck", "Multiple colors"],
     specifications: { Material: "95% Polyester, 5% Silk", Fit: "Regular", Sizes: "XS-XL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Black", "White", "Pink", "Green", "Brown", "Red"]
   },
   {
     id: "wf-012",
@@ -772,6 +801,7 @@ export const products: Product[] = [
     features: ["Built-in liner", "Moisture-wicking", "Side pockets", "Reflective details"],
     specifications: { Material: "100% Polyester", Inseam: "3 inches", Sizes: "XS-XL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Black", "Pink", "Green", "Purple"]
   },
   {
     id: "wf-013",
@@ -786,6 +816,7 @@ export const products: Product[] = [
     features: ["Wrap design", "V-neckline", "Tie waist", "Flowy sleeves"],
     specifications: { Material: "100% Polyester", Fit: "Wrap style", Sizes: "XS-XXL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Black", "White", "Pink", "Blue"]
   },
   {
     id: "wf-014",
@@ -800,6 +831,7 @@ export const products: Product[] = [
     features: ["Linen blend", "Elastic waistband", "Side pockets", "Relaxed fit"],
     specifications: { Material: "55% Linen, 45% Cotton", Inseam: "5 inches", Sizes: "XS-XL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Green", "Red", "Blue"]
   },
   {
     id: "wf-015",
@@ -814,6 +846,7 @@ export const products: Product[] = [
     features: ["Ribbed knit", "Turtleneck", "Slim fit", "Soft fabric"],
     specifications: { Material: "70% Viscose, 30% Nylon", Fit: "Slim", Sizes: "XS-XL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Black", "White", "Skin Color", "Gray"]
   },
   {
     id: "wf-016",
@@ -828,6 +861,7 @@ export const products: Product[] = [
     features: ["Floral print", "Elastic waistband", "Maxi length", "Flowy fabric"],
     specifications: { Material: "100% Rayon", Length: "Maxi", Sizes: "XS-XL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Blue", "Green", "Pink"]
   },
   {
     id: "wf-017",
@@ -842,6 +876,7 @@ export const products: Product[] = [
     features: ["Cropped length", "Drawstring hood", "Kangaroo pocket", "Soft fleece"],
     specifications: { Material: "80% Cotton, 20% Polyester", Fit: "Cropped", Sizes: "XS-XL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Black", "White", "Gray", "Skin Color", "Pink", "Brown", "Purple", "Yellow"]
   },
   {
     id: "wf-018",
@@ -856,6 +891,7 @@ export const products: Product[] = [
     features: ["Stretch fabric", "Back slit", "Knee length", "Wrinkle-resistant"],
     specifications: { Material: "68% Polyester, 29% Rayon, 3% Spandex", Length: "Knee", Sizes: "XS-XXL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Black", "Brown", "Silver"]
   },
   {
     id: "wf-019",
@@ -884,6 +920,7 @@ export const products: Product[] = [
     features: ["Soft fleece", "Elastic waistband", "Tapered leg", "Side pockets"],
     specifications: { Material: "80% Cotton, 20% Polyester", Fit: "Tapered", Sizes: "XS-XXL" },
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
+    colors: ["Black", "Skin Color", "Blue"]
   },
 
   // Outdoor & Camping (20 products)
@@ -900,6 +937,7 @@ export const products: Product[] = [
     description: "Quick-setup tent perfect for camping trips.",
     features: ["Sets up in 60 seconds", "Waterproof coating", "Ventilation windows", "Carry bag included"],
     specifications: { Capacity: "4 persons", Dimensions: "240cm x 210cm x 130cm", Weight: "4.5kg" },
+    colors: ["Blue", "Green", "Red"]
   },
   {
     id: "oc-002",
@@ -914,6 +952,7 @@ export const products: Product[] = [
     description: "Warm sleeping bag for cold weather camping.",
     features: ["Temperature rated -10°C", "Mummy shape", "Compression sack", "Water-resistant"],
     specifications: { "Temperature Rating": "-10°C", Fill: "Synthetic", Weight: "1.8kg" },
+    colors: ["Blue", "Green", "Dark Blue"]
   },
   {
     id: "oc-003",
@@ -927,6 +966,7 @@ export const products: Product[] = [
     description: "Large waterproof blanket for picnics and beach.",
     features: ["Waterproof backing", "Folds compactly", "Carrying handle", "Machine washable"],
     specifications: { Size: "200cm x 200cm", Material: "Polyester with waterproof backing", Weight: "800g" },
+    colors: ["Blue", "Green", "Pink"]
   },
   {
     id: "oc-004",
@@ -940,6 +980,7 @@ export const products: Product[] = [
     description: "Lightweight chair for camping and outdoor events.",
     features: ["Aluminum frame", "Cup holder", "Carry bag", "Supports 150kg"],
     specifications: { Material: "Aluminum + Oxford fabric", Weight: "2.2kg", "Load Capacity": "150kg" },
+    colors: ["Black", "White"]
   },
   {
     id: "oc-005",
@@ -953,6 +994,7 @@ export const products: Product[] = [
     description: "Bright LED lantern with multiple lighting modes.",
     features: ["1000 lumens", "USB rechargeable", "3 light modes", "Power bank function"],
     specifications: { Brightness: "1000 lumens", "Battery Life": "12-48 hours", "Charging Time": "4 hours" },
+
   },
   {
     id: "oc-006",
@@ -980,6 +1022,7 @@ export const products: Product[] = [
     description: "Adjustable poles for hiking and trekking.",
     features: ["Adjustable length", "Anti-shock system", "Cork grips", "Tungsten tips"],
     specifications: { Material: "Aluminum alloy", "Length Range": "65-135cm", Weight: "280g each" },
+    colors: ["Blue", "Green", "Yellow"]
   },
   {
     id: "oc-008",
@@ -1006,6 +1049,7 @@ export const products: Product[] = [
     description: "Compact pillow for comfortable camping sleep.",
     features: ["Inflates in seconds", "Soft fabric cover", "Compact when deflated", "Adjustable firmness"],
     specifications: { Material: "TPU + Polyester", "Inflated Size": "40cm x 30cm x 12cm", Weight: "85g" },
+    colors: ["Blue", "Green", "Blue", "Black", "Silver", "Red"]
   },
   {
     id: "oc-010",
@@ -1019,6 +1063,7 @@ export const products: Product[] = [
     description: "Keep gear dry during water activities.",
     features: ["100% waterproof", "Roll-top closure", "Shoulder strap", "Durable PVC"],
     specifications: { Capacity: "20L", Material: "PVC tarpaulin", Waterproof: "IPX6" },
+    colors: ["Blue", "Red", "Dark Green", "White"]
   },
   {
     id: "oc-011",
@@ -1065,7 +1110,7 @@ export const products: Product[] = [
     category: "outdoor-camping",
     price: 29.99,
     image: "/gods/insulated-cooler-bag-30l.jpg",
-    images: ["/gods/insulated-cooler-bag-30l.jpg", "/gods/insulated-cooler-bag-30l1.jpg", "/gods/insulated-cooler-bag-30l2.jpg", "/gods/insulated-cooler-bag-30l3.jpg", "/gods/insulated-cooler-bag-30l4.jpg", "/gods/insulated-cooler-bag-30l5.jpg"],
+    images: ["/gods/insulated-cooler-bag-30l.jpg", "/gods/insulated-cooler-bag-30l1.jpg", "/gods/insulated-cooler-bag-30l2.jpg", "/gods/insulated-cooler-bag-30l4.jpg", "/gods/insulated-cooler-bag-30l5.jpg"],
     rating: 4.5,
         inStock: true,
     description: "Keep food and drinks cold for hours.",
@@ -1084,6 +1129,7 @@ export const products: Product[] = [
     description: "Comprehensive survival kit for emergencies.",
     features: ["40+ items", "First aid supplies", "Fire starter", "Compact case"],
     specifications: { Items: "40+", Weight: "1.1kg", Case: "Water-resistant" },
+    colors: ["Red", "Blue"]
   },
   {
     id: "oc-016",
@@ -1105,7 +1151,7 @@ export const products: Product[] = [
     price: 64.99,
     originalPrice: 89.99,
     image: "/gods/camping-cot-portable-folding.jpg",
-    images: ["/gods/camping-cot-portable-folding.jpg", "/gods/camping-cot-portable-folding1.jpg", "/gods/camping-cot-portable-folding2.jpg", "/gods/camping-cot-portable-folding3.jpg", "/gods/camping-cot-portable-folding4.jpg", "/gods/camping-cot-portable-folding5.jpg"],
+    images: ["/gods/camping-cot-portable-folding.jpg", "/gods/camping-cot-portable-folding1.jpg", "/gods/camping-cot-portable-folding2.jpg", "/gods/camping-cot-portable-folding3.jpg", "/gods/camping-cot-portable-folding4.jpg"],
     rating: 4.7,
         inStock: true,
     description: "Elevated cot for comfortable camping sleep.",
@@ -1128,6 +1174,7 @@ export const products: Product[] = [
     description: "Hands-free lighting for night activities.",
     features: ["1200 lumens", "USB rechargeable", "5 light modes", "Waterproof IPX4"],
     specifications: { Brightness: "1200 lumens", "Battery Life": "4-30 hours", Weight: "95g" },
+    colors: ["Orange", "Black"]
   },
   {
     id: "oc-019",
@@ -1154,6 +1201,7 @@ export const products: Product[] = [
     description: "Solar-heated shower for camping hygiene.",
     features: ["20L capacity", "Solar heating", "Temperature indicator", "Shower head included"],
     specifications: { Capacity: "20L", Material: "PVC", "Heating Time": "3 hours in sun" },
+    colors: ["Black", "Brown", "White", "Skin Color"]
   },
 
   // Sports Equipment (20 products)
@@ -1170,6 +1218,7 @@ export const products: Product[] = [
     description: "High-quality yoga mat with excellent grip and cushioning.",
     features: ["6mm thickness", "Non-slip surface", "Eco-friendly TPE", "Carrying strap included"],
     specifications: { Material: "TPE", Thickness: "6mm", Dimensions: "183cm x 61cm" },
+    colors: ["Purple", "Pink", "Green", "Silver"]
   },
   {
     id: "se-002",
@@ -1183,6 +1232,7 @@ export const products: Product[] = [
     description: "Professional jump rope with digital counter.",
     features: ["Digital counter", "Adjustable length", "Ball bearings", "Comfortable grips"],
     specifications: { Material: "Steel wire + PVC coating", Length: "Adjustable up to 3m", Weight: "180g" },
+    colors: ["Pink", "Blue", "Brown"]
   },
   {
     id: "se-003",
@@ -1196,6 +1246,7 @@ export const products: Product[] = [
     description: "Complete set of resistance bands for strength training.",
     features: ["5 resistance levels", "Natural latex", "Carry bag", "Exercise guide"],
     specifications: { Material: "Natural Latex", Resistance: "5-35 lbs", Dimensions: "30cm circumference" },
+    colors: ["Black", "Blue", "Green", "Red", "Yellow"]
   },
   {
     id: "se-004",
@@ -1224,6 +1275,7 @@ export const products: Product[] = [
     description: "Compact treadmill perfect for home use.",
     features: ["Foldable design", "LCD display", "12 programs", "Max speed 12 km/h"],
     specifications: { "Motor Power": "2.5 HP", "Running Surface": "120cm x 40cm", "Max Weight": "120kg" },
+    colors: ["Black", "Silver", "Pink"]
   },
   {
     id: "se-006",
@@ -1237,6 +1289,7 @@ export const products: Product[] = [
     description: "Professional wrist wraps for weightlifting.",
     features: ["18-inch length", "Thumb loop", "Adjustable tightness", "Breathable fabric"],
     specifications: { Length: "18 inches", Material: "Cotton + Elastic", Closure: "Velcro" },
+    colors: ["Black", "Yellow", "Red", "Silver"]
   },
   {
     id: "se-007",
@@ -1250,6 +1303,7 @@ export const products: Product[] = [
     description: "Effective ab roller for core strengthening.",
     features: ["Dual wheels", "Non-slip handles", "Knee pad included", "Stable design"],
     specifications: { Material: "ABS + TPR", "Wheel Diameter": "18cm", "Max Load": "150kg" },
+    colors: ["Black", "White", "Blue", "Red"]
   },
   {
     id: "se-008",
@@ -1263,6 +1317,7 @@ export const products: Product[] = [
     description: "Versatile exercise ball for fitness and yoga.",
     features: ["Anti-burst design", "Multiple sizes", "Pump included", "Textured surface"],
     specifications: { Material: "PVC", Sizes: "55cm, 65cm, 75cm", "Max Load": "300kg" },
+    colors: ["Purple", "Pink", "Red", "Blue", "Silver"]
   },
   {
     id: "se-009",
@@ -1276,6 +1331,7 @@ export const products: Product[] = [
     description: "High-density foam roller for muscle recovery.",
     features: ["High-density foam", "Textured surface", "Multiple sizes", "Carry bag"],
     specifications: { Material: "EVA Foam", Dimensions: "33cm x 14cm", Density: "High" },
+    colors: ["Pink", "Brown", "White"]
   },
   {
     id: "se-010",
@@ -1289,6 +1345,7 @@ export const products: Product[] = [
     description: "Durable cast iron kettlebell for strength training.",
     features: ["Cast iron construction", "Wide handle", "Flat base", "Multiple weights"],
     specifications: { Material: "Cast Iron", Weights: "8kg, 12kg, 16kg, 20kg", Finish: "Powder coated" },
+    colors: ["Black", "Pink", "Green", "Purple", "Light Gray"]
   },
   {
     id: "se-011",
@@ -1315,10 +1372,11 @@ export const products: Product[] = [
     description: "Adjustable ankle weights for resistance training.",
     features: ["Adjustable weight", "Comfortable padding", "Secure straps", "Pair included"],
     specifications: { "Weight Range": "1-5 lbs per ankle", Material: "Neoprene + Iron sand", Closure: "Velcro" },
+    colors: ["Black", "Pink", "Green", "Purple", "Light Gray", "Red"]
   },
   {
     id: "se-013",
-    name: "Yoga Block Set of 2",
+    name: "Yoga Block Set",
     category: "sports-equipment",
     price: 15.99,
     image: "/gods/yoga-block-set-of-2.jpg",
@@ -1326,8 +1384,9 @@ export const products: Product[] = [
     rating: 4.7,
         inStock: true,
     description: "Supportive yoga blocks for better alignment.",
-    features: ["High-density foam", "Non-slip surface", "Set of 2", "Multiple colors"],
+    features: ["High-density foam", "Non-slip surface", "Multiple colors"],
     specifications: { Material: "EVA Foam", Dimensions: "23cm x 15cm x 10cm", Weight: "150g each" },
+    colors: ["Pink", "Brown", "White", "Green", "Blue"]
   },
   {
     id: "se-014",
@@ -1354,6 +1413,7 @@ export const products: Product[] = [
     description: "Weighted medicine ball for strength and conditioning.",
     features: ["Textured surface", "Durable rubber", "Multiple weights", "Easy to grip"],
     specifications: { Material: "Rubber", Weights: "4kg, 6kg, 8kg, 10kg", Diameter: "22-28cm" },
+    colors: ["Purple", "Blue", "Green", "Orange", "Pink"]
   },
   {
     id: "se-016",
@@ -1367,6 +1427,7 @@ export const products: Product[] = [
     description: "Improve speed and agility with this training ladder.",
     features: ["12 adjustable rungs", "Carry bag", "Ground stakes", "Durable nylon"],
     specifications: { Length: "6 meters", Rungs: "12", Material: "Nylon + Plastic" },
+    colors: ["Blue", "Yellow"]
   },
   {
     id: "se-017",
@@ -1393,6 +1454,7 @@ export const products: Product[] = [
     description: "Heavy jump rope for intense cardio workouts.",
     features: ["Weighted handles", "Adjustable length", "Ball bearings", "Durable cable"],
     specifications: { "Handle Weight": "0.5 lbs each", Material: "Steel cable + PVC", Length: "Adjustable" },
+    colors: ["Black", "Green", "Blue", 'Brown', "Black Orange", "Pink"]
   },
   {
     id: "se-019",
@@ -1423,10 +1485,8 @@ export const products: Product[] = [
       Resistance: "Up to 150 lbs combined",
       Includes: "Handles, anchor, straps",
     },
+    colors: ["Gold", "Silver"]
   },
-
-
-
   // Purple Clay Teapots (20 products)
   {
     id: "tp-001",
@@ -1448,7 +1508,7 @@ export const products: Product[] = [
     category: "creative-decor",
     price: 49.99,
     image: "/gods/purple-clay-gong-dao-bei-fairness-cup.jpg",
-    images: ["/gods/purple-clay-gong-dao-bei-fairness-cup.jpg", "/gods/purple-clay-gong-dao-bei-fairness-cup1.jpg", "/gods/purple-clay-gong-dao-bei-fairness-cup2.jpg", "/gods/purple-clay-gong-dao-bei-fairness-cup3.jpg", "/gods/purple-clay-gong-dao-bei-fairness-cup4.jpg", "/gods/purple-clay-gong-dao-bei-fairness-cup5.jpg"],
+    images: ["/gods/purple-clay-gong-dao-bei-fairness-cup.jpg", "/gods/purple-clay-gong-dao-bei-fairness-cup2.jpg", "/gods/purple-clay-gong-dao-bei-fairness-cup3.jpg", "/gods/purple-clay-gong-dao-bei-fairness-cup4.jpg"],
     rating: 4.8,
         inStock: true,
     description: "Purple clay fairness cup for serving tea.",
@@ -1527,7 +1587,7 @@ export const products: Product[] = [
     category: "creative-decor",
     price: 59.99,
     image: "/gods/purple-clay-gaiwan-lid-cup.jpg",
-    images: ["/gods/purple-clay-gaiwan-lid-cup.jpg", "/gods/purple-clay-gaiwan-lid-cup1.jpg", "/gods/purple-clay-gaiwan-lid-cup2.jpg", "/gods/purple-clay-gaiwan-lid-cup3.jpg", "/gods/purple-clay-gaiwan-lid-cup4.jpg", "/gods/purple-clay-gaiwan-lid-cup5.jpg"],
+    images: ["/gods/purple-clay-gaiwan-lid-cup.jpg", "/gods/purple-clay-gaiwan-lid-cup2.jpg", "/gods/purple-clay-gaiwan-lid-cup3.jpg", "/gods/purple-clay-gaiwan-lid-cup4.jpg", "/gods/purple-clay-gaiwan-lid-cup5.jpg"],
     rating: 4.7,
         inStock: true,
     description: "Versatile purple clay gaiwan for brewing tea.",
@@ -1585,6 +1645,7 @@ export const products: Product[] = [
     description: "Functional purple clay tea tray with drainage.",
     features: ["Zisha clay", "Water collection reservoir", "Durable and practical", "Enhances tea ceremony"],
     specifications: { Material: "Purple Clay", Dimensions: "30x20cm", Style: "Tea tray" },
+    colors: ["Dark Color", "Light Color"]
   },
   {
     id: "tp-013",
@@ -1599,6 +1660,7 @@ export const products: Product[] = [
     description: "Ornate Zisha teapot inspired by imperial designs.",
     features: ["Intricate details", "High-quality Zisha clay", "Luxurious feel", "Collector's piece"],
     specifications: { Material: "Zisha Clay", Capacity: "400ml", Style: "Imperial teapot" },
+    colors: ["Dark Color", "Light Color"]
   },
   {
     id: "tp-014",
@@ -1612,6 +1674,7 @@ export const products: Product[] = [
     description: "Set of four purple clay tea cups.",
     features: ["Handmade Zisha cups", "Comfortable to hold", "Set of 4", "Enhances tea aroma"],
     specifications: { Material: "Purple Clay", Quantity: "4 pieces", Style: "Tea cups" },
+    colors: ["Dark Color", "Light Color"]
   },
   {
     id: "tp-015",
@@ -1671,7 +1734,7 @@ export const products: Product[] = [
     category: "creative-decor",
     price: 299.99,
     image: "/gods/handmade-zisha-tea-ware-set-luxury.jpg",
-    images: ["/gods/handmade-zisha-tea-ware-set-luxury.jpg", "/gods/handmade-zisha-tea-ware-set-luxury1.jpg", "/gods/handmade-zisha-tea-ware-set-luxury2.jpg", "/gods/handmade-zisha-tea-ware-set-luxury3.jpg", "/gods/handmade-zisha-tea-ware-set-luxury4.jpg", "/gods/handmade-zisha-tea-ware-set-luxury5.jpg"],
+    images: ["/gods/handmade-zisha-tea-ware-set-luxury.jpg", "/gods/handmade-zisha-tea-ware-set-luxury1.jpg", "/gods/handmade-zisha-tea-ware-set-luxury2.jpg", "/gods/handmade-zisha-tea-ware-set-luxury3.jpg", "/gods/handmade-zisha-tea-ware-set-luxury4.jpg"],
     rating: 4.9,
         inStock: true,
     description: "Luxury handmade Zisha tea ware set.",
