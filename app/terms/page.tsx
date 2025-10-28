@@ -125,7 +125,7 @@ export default function TermsOfServicePage() {
                 <section className="mb-8">
                   <h2 className="text-xl font-semibold mb-4">9. Governing Law</h2>
                   <p className="mb-4">
-                    These Terms of Service and any separate agreements whereby we provide you Services shall be governed by and construed in accordance with the laws of Spain.
+                    These Terms of Service and any separate agreements whereby we provide you Services shall be governed by and construed in accordance with the laws of Spain and the Personal Data Protection Act (PDPA) of Singapore.
                   </p>
                   <p>
                     Any disputes arising out of or relating to these Terms of Service or the Services shall be subject to the exclusive jurisdiction of the courts of Spain.

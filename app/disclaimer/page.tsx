@@ -119,8 +119,8 @@ export default function DisclaimerPage() {
                 <section className="mb-8">
                   <h2 className="text-xl font-semibold mb-4">8. Jurisdiction</h2>
                   <p>
-                    This disclaimer is governed by the laws of Singapore. Any disputes arising from 
-                    this disclaimer shall be subject to the exclusive jurisdiction of the courts of Singapore.
+                    This disclaimer is governed by the laws of Singapore and Spain. 
+                    Any disputes arising from this disclaimer shall be subject to the jurisdiction of the courts of Singapore and Spain.
                   </p>
                 </section>
 
@@ -131,7 +131,7 @@ export default function DisclaimerPage() {
                   </p>
                   <div className="mt-4 p-4 bg-muted rounded-lg">
                     <p><strong>Email:</strong> legal@codpal.com</p>
-                    <p><strong>Address:</strong> CODPAL PTE. LTD., Singapore</p>
+                    <p><strong>Address:</strong> CODPAL PTE. LTD., Singapore | Spanish</p>
                   </div>
                 </section>
               </CardContent>

@@ -148,8 +148,8 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p className="mb-2">© 2025 ICEBOX NETWORK SL. All rights reserved.</p>
-          <p>Getafe, Resurrección street, number 3, Spain | Governed by Spanish Law</p>
+          <p className="mb-2">© 2025 codpal.pet.ltd (Singapore). All rights reserved.Governed by Singapore Law. </p>
+          <p>European Operations: ICEBOX NETWORK SL, Getafe, Resurrección street, number 3, Spain | Governed by Spanish Law</p>
         </div>
       </div>
     </footer>

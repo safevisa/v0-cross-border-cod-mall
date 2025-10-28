@@ -116,7 +116,7 @@ export default function PrivacyPolicyPage() {
                   <div className="bg-blue-50 p-4 rounded-lg">
                     <p className="text-sm">
                       <strong>Data Protection Officer:</strong> dpo@codpal.com<br />
-                      <strong>Supervisory Authority:</strong> Spanish Data Protection Agency (AEPD)
+                      <strong>Supervisory Authority:</strong> Spanish Data Protection Agency (AEPD) | Personal Data Protection Commission (PDPC, Singapore)
                     </p>
                   </div>
                 </section>

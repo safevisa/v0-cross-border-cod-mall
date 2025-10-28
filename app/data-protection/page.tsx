@@ -40,7 +40,8 @@ export default function DataProtectionPage() {
                   <section className="mb-8">
                     <h2 className="text-xl font-semibold mb-4">1. Legal Basis for Processing</h2>
                     <p className="mb-4">
-                      ICEBOX NETWORK SL processes personal data in compliance with the General Data Protection Regulation (GDPR) and Spanish data protection laws. Our legal bases for processing include:
+                      ICEBOX NETWORK SL processes personal data in compliance with the General Data Protection Regulation (GDPR) and 
+                      Spanish data protection laws,and the Personal Data Protection Act (PDPA) of Singapore. Our legal bases for processing include:
                     </p>
                     <ul className="list-disc pl-6 space-y-2">
                       <li><strong>Contract Performance:</strong> To fulfill orders and provide services</li>
@@ -152,7 +153,7 @@ export default function DataProtectionPage() {
                         <p><strong>Address:</strong> Getafe, Resurrección street, number 3, Spain</p>
                         <p><strong>Email:</strong> privacy@codpal.com</p>
                         <p><strong>DPO:</strong> dpo@codpal.com</p>
-                        <p><strong>Supervisory Authority:</strong> Spanish Data Protection Agency (AEPD)</p>
+                        <p><strong>Supervisory Authority:</strong> Spanish Data Protection Agency (AEPD) | Personal Data Protection Commission (PDPC, Singapore)</p>
                       </div>
                     </div>
                   </div>
