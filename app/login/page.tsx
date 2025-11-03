@@ -44,7 +44,7 @@ export default function LoginPage() {
     <div className="flex min-h-screen flex-col">
       <Header />
 
-      <main className="flex-1 flex items-center justify-center py-12">
+      <main className="flex-1 px-2 flex items-center justify-center py-12">
         <div className="w-full max-w-md">
           <div className="flex items-center gap-4 mb-8">
             <Button variant="ghost" asChild>

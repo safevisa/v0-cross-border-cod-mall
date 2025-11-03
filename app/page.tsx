@@ -11,7 +11,7 @@ export default function HomePage() {
     <div className="flex min-h-screen flex-col">
       <Header />
 
-      <main className="flex-1">
+      <main className="flex-1 p-2">
         <section className="border-b bg-gradient-to-r from-primary/5 via-background to-accent/5 py-8 flex justify-center">
           <div className="container">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
