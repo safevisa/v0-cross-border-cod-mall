@@ -334,6 +334,41 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
           )}
         </div>
       </main>
+      {/* 页面滚动图文结合介绍产品 */}
+      <section className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-12 text-center">产品细节展示</h2>
+        
+        {/* 横向滚动容器 */}
+        <div className="relative">
+          <div className="max-w-3xl mx-auto space-y-8">
+            {images.map((item, index) => (
+              <div 
+                key={index}
+                className="min-w-[80vw] md:min-w-[60vw] lg:min-w-[40vw] snap-center"
+              >
+                <div className="relative w-full h-[400px] rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src={item}
+                    alt={`Product feature ${index + 1}`}
+                    fill
+                    className="object-cover"
+                  />
+                  {/* 右下角悬浮特性文本 */}
+                  <div className="absolute bottom-6 right-6 bg-black/70 text-white p-4 rounded-lg backdrop-blur-sm max-w-xs">
+                  {
+                    product.features.map((feature, index) => (
+                      <p key={index} className="text-gray-200 mb-2">{feature}</p>
+                    ))
+                  }
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
 
       <Footer />
     </div>

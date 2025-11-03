@@ -44,6 +44,9 @@ export const products: Product[] = [
       "Portable carrying case",
       "Dishwasher safe",
       "Includes fork, spoon, knife, chopsticks",
+      "Leak-proof silicone sealing gaskets",
+      "Microwave and dishwasher safe construction",
+      "BPA-free food-grade materials"
     ],
     specifications: { Material: "Glass, rubber", Weight: "180g", Size: "19cm x 6cm" },
   },
