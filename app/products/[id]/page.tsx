@@ -4,7 +4,7 @@ import { notFound } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
 import { use, useState } from "react"
-import { ShoppingCart, Heart, Share2, Package, Shield, ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react"
+import { ShoppingCart, Heart, Share2, Package, Shield, ArrowLeft, ChevronLeft, ChevronRight, ShieldCheck, ThermometerSun, Snowflake, ArrowDownUp, Star, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
@@ -20,7 +20,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
   const { addToCart } = useCart()
   const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist()
   const product = getProductById(resolvedParams.id)
-  
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [selectedSize, setSelectedSize] = useState<string>("")
   const [selectedColor, setSelectedColor] = useState<string>("")
@@ -88,7 +88,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
       alert('Please select a color')
       return
     }
-    
+
     addToCart({ ...product, size: selectedSize, color: selectedColor })
   }
 
@@ -99,6 +99,12 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
   const prevImage = () => {
     setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length)
   }
+  const featureIcons = [
+    <ShieldCheck className="w-6 h-6 text-green-500" />,  // BPA-free硅胶
+    <ThermometerSun className="w-6 h-6 text-orange-500" />, // 微波炉适用
+    <Snowflake className="w-6 h-6 text-blue-500" />,       // 冰箱适用
+    <ArrowDownUp className="w-6 h-6 text-purple-500" />    // 可折叠设计
+  ];
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -118,11 +124,11 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
             <div className="space-y-4">
               {/* Main Image */}
               <div className="relative aspect-square rounded-lg overflow-hidden bg-muted">
-                <Image 
-                  src={images[currentImageIndex] || "/placeholder.svg"} 
-                  alt={product.name} 
-                  fill 
-                  className="object-cover" 
+                <Image
+                  src={images[currentImageIndex] || "/placeholder.svg"}
+                  alt={product.name}
+                  fill
+                  className="object-cover"
                 />
                 {product.originalPrice && (
                   <Badge className="absolute top-4 left-4 bg-destructive">
@@ -132,7 +138,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                 {!product.inStock && (
                   <Badge className="absolute top-4 right-4 bg-destructive">Out of Stock</Badge>
                 )}
-                
+
                 {/* Navigation Arrows */}
                 {images.length > 1 && (
                   <>
@@ -155,7 +161,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                   </>
                 )}
               </div>
-              
+
               {/* Thumbnail Images */}
               {images.length > 1 && (
                 <div className="grid grid-cols-6 gap-2">
@@ -163,15 +169,14 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                     <button
                       key={index}
                       onClick={() => setCurrentImageIndex(index)}
-                      className={`relative aspect-square rounded overflow-hidden border-2 ${
-                        currentImageIndex === index ? 'border-primary' : 'border-transparent'
-                      }`}
+                      className={`relative aspect-square rounded overflow-hidden border-2 ${currentImageIndex === index ? 'border-primary' : 'border-transparent'
+                        }`}
                     >
-                      <Image 
-                        src={img || "/placeholder.svg"} 
-                        alt={`${product.name} ${index + 1}`} 
-                        fill 
-                        className="object-cover" 
+                      <Image
+                        src={img || "/placeholder.svg"}
+                        alt={`${product.name} ${index + 1}`}
+                        fill
+                        className="object-cover"
                       />
                     </button>
                   ))}
@@ -215,11 +220,10 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                       <button
                         key={color}
                         onClick={() => setSelectedColor(color)}
-                        className={`px-4 py-2 border rounded-lg font-medium transition-colors ${
-                          selectedColor === color
+                        className={`px-4 py-2 border rounded-lg font-medium transition-colors ${selectedColor === color
                             ? 'border-primary bg-primary text-primary-foreground'
                             : 'border-gray-300 hover:border-primary'
-                        }`}
+                          }`}
                       >
                         {color}
                       </button>
@@ -240,11 +244,10 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
                       <button
                         key={size}
                         onClick={() => setSelectedSize(size)}
-                        className={`px-4 py-2 border rounded-lg font-medium transition-colors ${
-                          selectedSize === size
+                        className={`px-4 py-2 border rounded-lg font-medium transition-colors ${selectedSize === size
                             ? 'border-primary bg-primary text-primary-foreground'
                             : 'border-gray-300 hover:border-primary'
-                        }`}
+                          }`}
                       >
                         {size}
                       </button>
@@ -258,9 +261,9 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
 
               {/* Action Buttons */}
               <div className="flex gap-3">
-                <Button 
-                  className="flex-1" 
-                  size="lg" 
+                <Button
+                  className="flex-1"
+                  size="lg"
                   onClick={handleAddToCart}
                   disabled={!product.inStock}
                 >
@@ -335,40 +338,98 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
         </div>
       </main>
       {/* 页面滚动图文结合介绍产品 */}
-      <section className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center">产品细节展示</h2>
-        
-        {/* 横向滚动容器 */}
-        <div className="relative">
-          <div className="max-w-3xl mx-auto space-y-8">
-            {images.map((item, index) => (
-              <div 
-                key={index}
-                className="min-w-[80vw] md:min-w-[60vw] lg:min-w-[40vw] snap-center"
-              >
-                <div className="relative w-full h-[400px] rounded-xl overflow-hidden shadow-lg">
-                  <Image
-                    src={item}
-                    alt={`Product feature ${index + 1}`}
-                    fill
-                    className="object-cover"
-                  />
-                  {/* 右下角悬浮特性文本 */}
-                  <div className="absolute bottom-6 right-6 bg-black/70 text-white p-4 rounded-lg backdrop-blur-sm max-w-xs">
-                  {
-                    product.features.map((feature, index) => (
-                      <p key={index} className="text-gray-200 mb-2">{feature}</p>
-                    ))
-                  }
+      <section className="py-12 bg-gradient-to-b from-white to-gray-50">
+        <div className="container mx-auto px-4">
+          {/* 产品标题与价格区 */}
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">{product.name}</h1>
+
+            <div className="flex items-center justify-center space-x-4 mb-4">
+              <div className="flex items-center">
+                <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+                <span className="ml-1 font-semibold">{product.rating}</span>
+              </div>
+              <div className="text-sm text-gray-500">|</div>
+              <div className="text-sm font-medium text-green-600">In Stock</div>
+            </div>
+
+            <div className="flex items-center justify-center space-x-3">
+              <span className="text-3xl font-bold text-gray-900">${product.price.toFixed(2)}</span>
+              <span className="text-xl text-gray-500 line-through">${product?.originalPrice?.toFixed(2)}</span>
+              <span className="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm font-medium">
+                Save ${(product?.originalPrice && product.price ? product?.originalPrice - product.price : 0)?.toFixed(2)}
+              </span>
+            </div>
+
+            <p className="mt-4 text-gray-600 max-w-2xl mx-auto">{product.description}</p>
+          </div>
+
+          {/* 纵向滚动图文展示区 */}
+          <div className="max-w-3xl mx-auto space-y-6">
+            {product.images.map((image, index) => (
+              <div key={index} className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl group transition-all duration-300 hover:shadow-2xl" >
+                <Image
+                  src={image}
+                  alt={`${product.name} - View ${index + 1}`}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+
+                {/* 渐变遮罩增强文字可读性 */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-70"></div>
+
+                {/* 特性文本 - 仅对前4张图片显示对应特性 */}
+                {index < product.features?.length && (
+                  <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-4 md:p-6 rounded-xl shadow-lg transform transition-transform duration-300 group-hover:translate-y-[-5px]">
+                    <div className="flex items-start gap-3">
+                      <div className="mt-1">{featureIcons[index]}</div>
+                      <div>
+                        <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-1">{product.features[index]}</h3>
+                        {/* 根据特性添加补充说明 */}
+                        {index === 0 && <p className="text-gray-600">Safe for you and your family</p>}
+                        {index === 1 && <p className="text-gray-600">Convenient heating and storage</p>}
+                        {index === 2 && <p className="text-gray-600">Space-saving design for small kitchens</p>}
+                        {index === 3 && <p className="text-gray-600">Perfect for all your storage needs</p>}
+                      </div>
+                    </div>
                   </div>
-                </div>
+                )}
+
+                {/* 规格信息卡片 - 最后一张图片显示 */}
+                {index === product.images.length - 1 && (
+                  <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-5 rounded-xl shadow-lg">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                      <CheckCircle2 className="w-5 h-5 text-blue-500 mr-2" />
+                      Product Specifications
+                    </h3>
+                    <div className="grid grid-cols-2 gap-4 text-gray-700">
+                      {Object.entries(product.specifications).map(([key, value]) => (
+                        <div key={key}>
+                          <span className="font-medium">{key}:</span> {value}
+                        </div>
+                      ))}
+                      <div>
+                        <span className="font-medium">Set Includes:</span> 4 sizes
+                      </div>
+                      <div>
+                        <span className="font-medium">Safety:</span> BPA-free
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
+
+          {/* 行动召唤区域 */}
+          <div className="max-w-3xl mx-auto mt-12 text-center">
+            <Button className="px-8 py-6 text-lg bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white rounded-full shadow-lg transform transition hover:scale-105 cursor-pointer">
+              Add to Cart - ${product.price.toFixed(2)}
+            </Button>
+            <p className="mt-4 text-gray-500 text-sm">30-day money back guarantee • Free shipping on orders over $35</p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       <Footer />
     </div>
