@@ -41,13 +41,13 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
   const [addresses, setAddresses] = useState<Address[]>([
     {
       id: '1',
-      name: 'John Doe',
-      phone: '+65 9123 4567',
-      address: '123 Orchard Road',
-      city: 'Singapore',
-      state: 'Central Region',
-      postalCode: '238863',
-      country: 'Singapore',
+      name: 'your name',
+      phone: 'your phone number',
+      address: 'your address',
+      city: 'your city',
+      state: 'your state',
+      postalCode: 'your postal code',
+      country: 'your country',
       isDefault: true
     }
   ])

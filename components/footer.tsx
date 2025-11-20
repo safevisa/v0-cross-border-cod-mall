@@ -1,7 +1,11 @@
+'use client'
 import Link from "next/link"
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react"
 
 export function Footer() {
+  const openWindow = (url: string) => {
+    window.open(url, "_blank")
+  }
   return (
     <footer className="border-t bg-muted/50 p-2 flex justify-center">
       <div className="container py-12">
@@ -18,16 +22,16 @@ export function Footer() {
               with confidence using our secure COD payment and RFID tracking.
             </p>
             <div className="flex gap-3">
-              <Link href="#" className="text-muted-foreground hover:text-foreground">
+              <Link href="#" onClick={() => openWindow("https://www.facebook.com")} className="text-muted-foreground hover:text-foreground">
                 <Facebook className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-foreground">
+              <Link href="#" onClick={() => openWindow("https://www.instagram.com")} className="text-muted-foreground hover:text-foreground">
                 <Instagram className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-foreground">
+              <Link href="#" onClick={() => openWindow("https://twitter.com")} className="text-muted-foreground hover:text-foreground">
                 <Twitter className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-foreground">
+              <Link href="#" onClick={() => openWindow("https://www.youtube.com")} className="text-muted-foreground hover:text-foreground">
                 <Youtube className="h-5 w-5" />
               </Link>
             </div>
@@ -149,7 +153,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
           <p className="mb-2">© 2025 codpal.pet.ltd (Singapore). All rights reserved.Governed by Singapore Law. </p>
-          <p>European Operations: ICEBOX NETWORK SL, Getafe, Resurrección street, number 3, Spain | Governed by Spanish Law</p>
+          <p>Getafe, Resurrección street, number 3, Spain | Governed by Spanish Law</p>
         </div>
       </div>
     </footer>
