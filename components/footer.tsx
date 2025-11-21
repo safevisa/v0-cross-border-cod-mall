@@ -153,7 +153,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
           <p className="mb-2">© 2025 codpal.pet.ltd (Singapore). All rights reserved.Governed by Singapore Law. </p>
-          <p>Getafe, Resurrección street, number 3, Spain | Governed by Spanish Law</p>
+          <p>ICEBOX NETWORK SL | 144 ROBINSON ROAD, #12-01, ROBINSON SQUARE, SINGAPORE 068908 | Governed by Singapore Law</p>
         </div>
       </div>
     </footer>

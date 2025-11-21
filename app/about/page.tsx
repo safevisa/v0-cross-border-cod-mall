@@ -65,8 +65,8 @@ export default function AboutUsPage() {
                           <h4 className="font-semibold">Registered Office</h4>
                           <p className="text-sm text-muted-foreground">
                             ICEBOX NETWORK SL<br />
-                            Getafe, Resurrección street, number 3<br />
-                            Spain
+                            144 ROBINSON ROAD, #12-01, ROBINSON SQUARE<br />
+                            SINGAPORE 068908
                           </p>
                         </div>
                       </div>
@@ -186,17 +186,17 @@ export default function AboutUsPage() {
                   <div className="bg-gray-50 p-4 rounded-lg">
                     <p className="font-semibold mb-2">ICEBOX NETWORK SL</p>
                     <p className="text-sm text-muted-foreground mb-4">
-                      Getafe, Resurrección street, number 3, Spain
+                      144 ROBINSON ROAD, #12-01, ROBINSON SQUARE, SINGAPORE 068908
                     </p>
                     <p className="text-sm text-muted-foreground mb-2">
                       <strong>Governing Law:</strong> These Terms of Service and any separate agreements 
                       whereby we provide you Services shall be governed by and construed in accordance 
-                      with the laws of Spain.
+                      with the laws of Singapore.
                     </p>
                     <p className="text-sm text-muted-foreground">
                       <strong>Jurisdiction:</strong> Any disputes arising out of or relating to these 
                       Terms of Service or the Services shall be subject to the exclusive jurisdiction 
-                      of the courts of Spain.
+                      of the courts of Singapore.
                     </p>
                   </div>
                 </CardContent>

@@ -122,8 +122,8 @@ export default function ContactPage() {
                         <h4 className="font-medium">Headquarters</h4>
                         <p className="text-sm text-muted-foreground">
                           ICEBOX NETWORK SL<br />
-                          Getafe, Resurrección street, number 3<br />
-                          Spain
+                          144 ROBINSON ROAD, #12-01, ROBINSON SQUARE<br />
+                          SINGAPORE 068908
                         </p>
                       </div>
                     </div>

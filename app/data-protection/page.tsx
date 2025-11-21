@@ -150,7 +150,7 @@ export default function DataProtectionPage() {
                       <h3 className="font-semibold mb-3">Contact Information</h3>
                       <div className="space-y-2 text-sm">
                         <p><strong>Data Controller:</strong> ICEBOX NETWORK SL</p>
-                        <p><strong>Address:</strong> Getafe, Resurrección street, number 3, Spain</p>
+                        <p><strong>Address:</strong> 144 ROBINSON ROAD, #12-01, ROBINSON SQUARE, SINGAPORE 068908</p>
                         <p><strong>Email:</strong> privacy@codpal.com</p>
                         <p><strong>DPO:</strong> dpo@codpal.com</p>
                         <p><strong>Supervisory Authority:</strong> Spanish Data Protection Agency (AEPD) | Personal Data Protection Commission (PDPC, Singapore)</p>

@@ -231,7 +231,7 @@ export default function ReturnsRefundsPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground mb-4">
-                    This Returns & Refunds Policy and any separate agreements whereby we provide you Services shall be governed by and construed in accordance with the laws of Spain.
+                    This Returns & Refunds Policy and any separate agreements whereby we provide you Services shall be governed by and construed in accordance with the laws of Singapore.
                   </p>
                 </CardContent>
               </Card>
@@ -243,7 +243,7 @@ export default function ReturnsRefundsPage() {
                 <CardContent>
                   <div className="bg-gray-50 p-4 rounded-lg mb-4">
                     <p className="font-semibold mb-2">ICEBOX NETWORK SL</p>
-                    <p className="text-sm text-muted-foreground mb-2">Getafe, Resurrección street, number 3, Spain</p>
+                    <p className="text-sm text-muted-foreground mb-2">144 ROBINSON ROAD, #12-01, ROBINSON SQUARE, SINGAPORE 068908</p>
                     <p className="text-sm text-muted-foreground">Email: support@codpal.com</p>
                   </div>
                   <p className="text-sm text-muted-foreground mb-4">

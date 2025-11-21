@@ -124,7 +124,7 @@ export default function PrivacyPolicyPage() {
                 <section className="mb-8">
                   <h2 className="text-xl font-semibold mb-4">6. Governing Law</h2>
                   <p>
-                    This Privacy Policy and any separate agreements whereby we provide you Services shall be governed by and construed in accordance with the laws of Spain.
+                    This Privacy Policy and any separate agreements whereby we provide you Services shall be governed by and construed in accordance with the laws of Singapore.
                   </p>
                 </section>
 
@@ -135,7 +135,7 @@ export default function PrivacyPolicyPage() {
                   </p>
                   <div className="mt-4 p-4 bg-muted rounded-lg">
                     <p className="font-semibold">ICEBOX NETWORK SL</p>
-                    <p>Getafe, Resurrección street, number 3, Spain</p>
+                    <p>144 ROBINSON ROAD, #12-01, ROBINSON SQUARE, SINGAPORE 068908</p>
                     <p><strong>Email:</strong> privacy@codpal.com</p>
                   </div>
                 </section>
