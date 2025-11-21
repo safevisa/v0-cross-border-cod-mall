@@ -157,7 +157,7 @@ export default function IntellectualPropertyPage() {
                   </p>
                   <div className="mt-4 p-4 bg-muted rounded-lg">
                     <p><strong>Email:</strong> legal@codpal.com</p>
-                    <p><strong>Address:</strong> CODPAL PTE. LTD., Singapore | Spanish</p>
+                    <p><strong>Address:</strong> CODPAL PTE. LTD., Singapore</p>
                     <p><strong>DMCA Agent:</strong> dmca@codpal.com</p>
                   </div>
                 </section>

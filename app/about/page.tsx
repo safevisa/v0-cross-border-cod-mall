@@ -38,7 +38,7 @@ export default function AboutUsPage() {
                 <CardContent className="space-y-4">
                   <p>
                     CODPAL is a leading cross-border e-commerce platform operated by ICEBOX NETWORK SL, 
-                    a Spanish company dedicated to connecting high-quality Chinese products with customers 
+                    a Singaporean company dedicated to connecting high-quality Chinese products with customers 
                     worldwide. We specialize in bringing you authentic products from trusted manufacturers 
                     across China.
                   </p>

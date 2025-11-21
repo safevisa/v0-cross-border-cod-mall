@@ -185,7 +185,7 @@ export default function CookiePolicyPage() {
                   </p>
                   <div className="mt-4 p-4 bg-muted rounded-lg">
                     <p><strong>Email:</strong> privacy@codpal.com</p>
-                    <p><strong>Address:</strong> CODPAL PTE. LTD., Singapore | Spanish</p>
+                    <p><strong>Address:</strong> CODPAL PTE. LTD., Singapore</p>
                   </div>
                 </section>
               </CardContent>
